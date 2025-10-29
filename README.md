@@ -7,7 +7,6 @@
 - **Email:** shuaihao@buaa.edu.cn
 - **Location:** Haidian District, Beijing
 - **Position:** PhD Student in Automation, Beihang University (Class of 2022)
-- **Party Membership:** Communist Party Member
 
 ## Photos
 <!-- Add your photos here -->
