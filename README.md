@@ -10,9 +10,25 @@
 
 ## Photos
 
-<img src="./images/profile.jpg" alt="Profile Photo" width="200"> <img src="./images/life_photo1.jpg" alt="Life Photo 1" width="200"> <img src="./images/life_photo2.jpg" alt="Life Photo 2" width="200">
-
-*From left to right: ID Photo | Personal Photo 1 | Personal Photo 2*
+<table>
+  <tr>
+    <td align="center">
+      <img src="./images/profile.jpg" alt="Profile Photo" width="200"><br/>
+      <sub>ID Photo</sub>
+    </td>
+    <td align="center">
+      <img src="./images/life_photo1.jpg" alt="Life Photo 1" width="200"><br/>
+      <sub>Personal Photo 1</sub>
+    </td>
+    <td align="center">
+      <img src="./images/life_photo2.jpg" alt="Life Photo 2" width="200"><br/>
+      <sub>Personal Photo 2</sub>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center"><em>From left to right: ID Photo | Personal Photo 1 | Personal Photo 2</em></td>
+  </tr>
+  </table>
 
 ## Career Timeline
 

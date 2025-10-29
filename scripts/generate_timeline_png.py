@@ -51,6 +51,23 @@ def draw_text_wrapped(draw, text, font, fill, x, y, max_width, line_height):
         draw.text((x, y + i * line_height), l, font=font, fill=fill)
     return y + len(lines) * line_height, len(lines)
 
+def measure_wrapped_height(draw, text, font, max_width, line_height):
+    words = text.split(' ')
+    lines = []
+    line = ''
+    for w in words:
+        test = (line + ' ' + w).strip()
+        wlen = draw.textlength(test, font=font)
+        if wlen <= max_width:
+            line = test
+        else:
+            if line:
+                lines.append(line)
+            line = w
+    if line:
+        lines.append(line)
+    return len(lines) * line_height, len(lines)
+
 def draw_timeline(img):
     draw = ImageDraw.Draw(img)
 
@@ -100,34 +117,40 @@ def draw_timeline(img):
         # Card geometry
         card_w, card_h_min = 480, 160
         pad_x, pad_y = 24, 18
+
+        # Pre-measure content height to avoid overdrawing text
+        tmp_y = 0
+        tmp_y += 34  # year line
+        title_h, _ = measure_wrapped_height(draw, e['title'], title_item_font, card_w - 2 * pad_x, 30)
+        tmp_y += title_h + 6
+        desc_total_h = 0
+        for d in e['desc']:
+            h, _ = measure_wrapped_height(draw, d, desc_font, card_w - 2 * pad_x, 28)
+            desc_total_h += h
+        tmp_y += desc_total_h
+        needed_h = max(card_h_min, pad_y + tmp_y + pad_y + 10)
+
         if e['side'] == 'right':
-            x1, y1 = cx + 30, cy - card_h_min // 2
-            x2, y2 = x1 + card_w, y1 + card_h_min
+            x1, y1 = cx + 30, cy - needed_h // 2
+            x2, y2 = x1 + card_w, y1 + needed_h
             text_x = x1 + pad_x
         else:
-            x2, y2 = cx - 30, cy + card_h_min // 2
-            x1, y1 = x2 - card_w, y2 - card_h_min
+            x2, y2 = cx - 30, cy + needed_h // 2
+            x1, y1 = x2 - card_w, y2 - needed_h
             text_x = x1 + pad_x
 
-        # Draw card base
+        # Draw card base (final height)
         rounded_rect(draw, (x1, y1, x2, y2), radius=18, fill=card_fill, outline=card_outline, width=2)
 
-        # Text content with wrapping
+        # Text content with wrapping (now safe)
         current_y = y1 + pad_y
         draw.text((text_x, current_y), e['year'], font=year_font, fill=(157, 178, 201))
         current_y += 34
 
-        current_y, title_lines = draw_text_wrapped(draw, e['title'], title_item_font, (230, 237, 243), text_x, current_y, card_w - 2 * pad_x, 30)
+        current_y, _ = draw_text_wrapped(draw, e['title'], title_item_font, (230, 237, 243), text_x, current_y, card_w - 2 * pad_x, 30)
         current_y += 6
         for d in e['desc']:
-            current_y, desc_lines = draw_text_wrapped(draw, d, desc_font, (181, 195, 214), text_x, current_y, card_w - 2 * pad_x, 28)
-
-        # Adjust card height if content exceeded
-        needed_h = max(card_h_min, (current_y - y1) + pad_y + 10)
-        if needed_h > (y2 - y1):
-            # redraw card with new height overlay
-            rounded_rect(draw, (x1, y1, x2, y1 + needed_h), radius=18, fill=card_fill, outline=card_outline, width=2)
-            # No need to redraw text; it already exists on top
+            current_y, _ = draw_text_wrapped(draw, d, desc_font, (181, 195, 214), text_x, current_y, card_w - 2 * pad_x, 28)
 
         # Badge
         badge_w, badge_h = 120, 32
