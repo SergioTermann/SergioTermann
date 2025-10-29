@@ -16,22 +16,14 @@
 
 ## Sports Videos
 
-<video width="320" height="240" controls>
-  <source src="./videos/sports_vedio1.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[![Video 1 Thumbnail](./images/profile.jpg)](./videos/sports_vedio1.mp4) [![Video 2 Thumbnail](./images/profile.jpg)](./videos/sports_vedio2.mp4) [![Video 3 Thumbnail](./images/profile.jpg)](./videos/sports_vedio3.mp4)
 
-<video width="320" height="240" controls>
-  <source src="./videos/sports_vedio2.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+*Click on images to view Table Tennis Training Videos*
 
-<video width="320" height="240" controls>
-  <source src="./videos/sports_vedio3.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-*Table Tennis Training Videos*
+**Video Links:**
+- [Table Tennis Training Video 1](./videos/sports_vedio1.mp4)
+- [Table Tennis Training Video 2](./videos/sports_vedio2.mp4)
+- [Table Tennis Training Video 3](./videos/sports_vedio3.mp4)
 
 ---
 
