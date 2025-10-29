@@ -14,6 +14,25 @@
 
 *From left to right: ID Photo | Personal Photo 1 | Personal Photo 2*
 
+## Sports Videos
+
+<video width="320" height="240" controls>
+  <source src="./videos/sports_video1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<video width="320" height="240" controls>
+  <source src="./videos/sports_video2.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<video width="320" height="240" controls>
+  <source src="./videos/sports_video3.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+*Table Tennis Training Videos*
+
 ---
 
 ## Education Background
