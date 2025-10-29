@@ -1,0 +1,162 @@
+/* Main Styles for Sergio Termann Portfolio */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Language Selector Styles */
+.language-selector {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.language-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.language-btn:hover {
+    background-color: #45a049;
+}
+
+.language-btn.active {
+    background-color: #2E8B57;
+}
+
+/* Content Styles */
+.content {
+    margin-top: 60px;
+}
+
+.content-section {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* Typography */
+h1 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #3498db;
+    margin-top: 30px;
+}
+
+h3 {
+    color: #2980b9;
+    margin-top: 20px;
+}
+
+h4 {
+    color: #16a085;
+    margin-top: 15px;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+.profile-photo {
+    max-width: 200px;
+    display: block;
+    margin: 20px 0;
+    border: 3px solid #3498db;
+}
+
+/* Dividers */
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 30px 0;
+}
+
+/* Lists */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .language-selector {
+        position: static;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .content {
+        margin-top: 20px;
+    }
+    
+    .profile-photo {
+        margin: 20px auto;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .language-selector {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+    }
+    
+    .content-section {
+        display: block;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+}
