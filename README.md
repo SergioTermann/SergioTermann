@@ -9,7 +9,7 @@
 
 ## Photos
 <!-- Add your photos here -->
-![Profile Photo](./images/profile.jpg)
+<img src="./images/profile.jpg" alt="Profile Photo" width="200">
 *Add your profile photo above*
 
 ![Project Photos](./images/project1.jpg)
