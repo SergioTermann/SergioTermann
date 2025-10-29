@@ -1,5 +1,7 @@
 # Sergio Termann
 
+[English | [Deutsch](./README_DE.md)]
+
 ## Contact Information
 - **Phone:** +86-13011010011
 - **Email:** shuaihao@buaa.edu.cn
