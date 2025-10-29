@@ -1,133 +1,205 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6a11cb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2575fc;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000033" />
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;display=swap');
+    
     .timeline-line {
-      stroke: #3498db;
-      stroke-width: 4;
+      stroke: url(#grad1);
+      stroke-width: 6;
+      stroke-linecap: round;
     }
     .timeline-dot {
-      fill: #3498db;
-      stroke: #fff;
-      stroke-width: 2;
+      fill: url(#grad1);
+      filter: url(#glow);
+      transition: all 0.3s ease;
     }
     .timeline-dot:hover {
-      fill: #2980b9;
-      r: 12;
+      r: 15;
+      filter: url(#shadow);
     }
     .timeline-label {
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-      font-weight: bold;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      fill: #333;
     }
     .timeline-sublabel {
-      font-family: Arial, sans-serif;
-      font-size: 12px;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 14px;
       fill: #555;
     }
     .timeline-description {
-      font-family: Arial, sans-serif;
-      font-size: 11px;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 12px;
       fill: #777;
     }
     .timeline-year {
-      font-family: Arial, sans-serif;
+      font-family: 'Montserrat', Arial, sans-serif;
       font-size: 16px;
-      font-weight: bold;
+      font-weight: 700;
       fill: #2c3e50;
     }
     .timeline-box {
-      fill: #f8f9fa;
-      stroke: #ddd;
+      fill: #ffffff;
+      stroke: #e0e0e0;
       stroke-width: 1;
-      rx: 5;
-      ry: 5;
+      rx: 10;
+      ry: 10;
+      filter: url(#shadow);
+      transition: all 0.3s ease;
     }
     .timeline-box:hover {
-      fill: #e9f7fe;
-      stroke: #3498db;
+      transform: translateY(-5px);
+      fill: #f8f9ff;
+      stroke: #2575fc;
     }
     .timeline-title {
-      font-family: Arial, sans-serif;
-      font-size: 24px;
-      font-weight: bold;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 28px;
+      font-weight: 700;
       fill: #2c3e50;
+    }
+    .timeline-left {
+      text-anchor: end;
+    }
+    .timeline-right {
+      text-anchor: start;
+    }
+    .timeline-badge {
+      fill: #e1f5fe;
+      stroke: #03a9f4;
+      stroke-width: 1;
+      rx: 12;
+      ry: 12;
+    }
+    .timeline-badge-text {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      fill: #0288d1;
+      text-anchor: middle;
+      dominant-baseline: middle;
     }
   </style>
   
   <!-- Title -->
-  <text x="400" y="40" text-anchor="middle" class="timeline-title">Sergio Termann's Career Timeline</text>
+  <text x="400" y="50" text-anchor="middle" class="timeline-title">Sergio Termann's Journey</text>
   
   <!-- Main timeline line -->
-  <line x1="100" y1="100" x2="100" y2="550" class="timeline-line" />
+  <line x1="400" y1="100" x2="400" y2="850" class="timeline-line" />
   
-  <!-- 2014-2018: Bachelor's Degree -->
-  <g>
-    <rect x="120" y="100" width="250" height="80" class="timeline-box" />
-    <circle cx="100" cy="140" r="10" class="timeline-dot" />
-    <text x="130" y="120" class="timeline-year">2014-2018</text>
-    <text x="130" y="140" class="timeline-label">Bachelor of Engineering</text>
-    <text x="130" y="160" class="timeline-sublabel">Beijing University of Technology</text>
-    <text x="130" y="175" class="timeline-description">Measurement and Control Technology</text>
+  <!-- 2014-2018: Bachelor's Degree (Left) -->
+  <g transform="translate(0,0)">
+    <rect x="100" y="100" width="280" height="100" class="timeline-box" />
+    <circle cx="400" cy="150" r="12" class="timeline-dot" />
+    <text x="370" y="125" class="timeline-year timeline-left">2014-2018</text>
+    <text x="370" y="150" class="timeline-label timeline-left">Bachelor of Engineering</text>
+    <text x="370" y="170" class="timeline-sublabel timeline-left">Beijing University of Technology</text>
+    <text x="370" y="190" class="timeline-description timeline-left">Measurement and Control Technology</text>
+    
+    <!-- Badge -->
+    <rect x="120" y="110" width="80" height="24" class="timeline-badge" />
+    <text x="160" y="122" class="timeline-badge-text">EDUCATION</text>
   </g>
   
-  <!-- 2019-2021: Master's Degree -->
-  <g>
-    <rect x="120" y="190" width="250" height="80" class="timeline-box" />
-    <circle cx="100" cy="230" r="10" class="timeline-dot" />
-    <text x="130" y="210" class="timeline-year">2019-2021</text>
-    <text x="130" y="230" class="timeline-label">Master of Engineering</text>
-    <text x="130" y="250" class="timeline-sublabel">Beihang University (BUAA)</text>
-    <text x="130" y="265" class="timeline-description">Software Engineering</text>
+  <!-- 2019: Internship (Right) -->
+  <g transform="translate(0,0)">
+    <rect x="420" y="200" width="280" height="100" class="timeline-box" />
+    <circle cx="400" cy="250" r="12" class="timeline-dot" />
+    <text x="430" y="225" class="timeline-year timeline-right">Jun-Sep 2019</text>
+    <text x="430" y="250" class="timeline-label timeline-right">Beihang Software Institute</text>
+    <text x="430" y="270" class="timeline-sublabel timeline-right">Autonomous Driving Project</text>
+    <text x="430" y="290" class="timeline-description timeline-right">Unmanned Vehicle Platform Integration</text>
+    
+    <!-- Badge -->
+    <rect x="600" y="210" width="80" height="24" class="timeline-badge" />
+    <text x="640" y="222" class="timeline-badge-text">INTERNSHIP</text>
   </g>
   
-  <!-- 2019: Internship -->
-  <g>
-    <rect x="380" y="100" width="250" height="80" class="timeline-box" />
-    <circle cx="100" cy="320" r="10" class="timeline-dot" />
-    <text x="390" y="120" class="timeline-year">Jun-Sep 2019</text>
-    <text x="390" y="140" class="timeline-label">Beihang Software Institute</text>
-    <text x="390" y="160" class="timeline-sublabel">Autonomous Driving Project</text>
-    <text x="390" y="175" class="timeline-description">Unmanned Vehicle Platform Integration</text>
+  <!-- 2019-2021: Master's Degree (Left) -->
+  <g transform="translate(0,0)">
+    <rect x="100" y="300" width="280" height="100" class="timeline-box" />
+    <circle cx="400" cy="350" r="12" class="timeline-dot" />
+    <text x="370" y="325" class="timeline-year timeline-left">2019-2021</text>
+    <text x="370" y="350" class="timeline-label timeline-left">Master of Engineering</text>
+    <text x="370" y="370" class="timeline-sublabel timeline-left">Beihang University (BUAA)</text>
+    <text x="370" y="390" class="timeline-description timeline-left">Software Engineering</text>
+    
+    <!-- Badge -->
+    <rect x="120" y="310" width="80" height="24" class="timeline-badge" />
+    <text x="160" y="322" class="timeline-badge-text">EDUCATION</text>
   </g>
   
-  <!-- 2020-2022: Chinese Academy of Sciences -->
-  <g>
-    <rect x="380" y="190" width="250" height="80" class="timeline-box" />
-    <circle cx="100" cy="410" r="10" class="timeline-dot" />
-    <text x="390" y="210" class="timeline-year">2020-2022</text>
-    <text x="390" y="230" class="timeline-label">Chinese Academy of Sciences</text>
-    <text x="390" y="250" class="timeline-sublabel">Institute of Automation</text>
-    <text x="390" y="265" class="timeline-description">AI Competitions & Research</text>
+  <!-- 2020-2022: Chinese Academy of Sciences (Right) -->
+  <g transform="translate(0,0)">
+    <rect x="420" y="400" width="280" height="100" class="timeline-box" />
+    <circle cx="400" cy="450" r="12" class="timeline-dot" />
+    <text x="430" y="425" class="timeline-year timeline-right">2020-2022</text>
+    <text x="430" y="450" class="timeline-label timeline-right">Chinese Academy of Sciences</text>
+    <text x="430" y="470" class="timeline-sublabel timeline-right">Institute of Automation</text>
+    <text x="430" y="490" class="timeline-description timeline-right">AI Competitions & Research</text>
+    
+    <!-- Badge -->
+    <rect x="600" y="410" width="80" height="24" class="timeline-badge" />
+    <text x="640" y="422" class="timeline-badge-text">RESEARCH</text>
   </g>
   
-  <!-- 2022-Present: PhD -->
-  <g>
-    <rect x="120" y="280" width="250" height="80" class="timeline-box" />
-    <circle cx="100" cy="500" r="10" class="timeline-dot" />
-    <text x="130" y="300" class="timeline-year">2022-Present</text>
-    <text x="130" y="320" class="timeline-label">PhD in Automation</text>
-    <text x="130" y="340" class="timeline-sublabel">Beihang University (BUAA)</text>
-    <text x="130" y="355" class="timeline-description">Reinforcement Learning & Robotics</text>
+  <!-- 2022-Present: PhD (Left) -->
+  <g transform="translate(0,0)">
+    <rect x="100" y="500" width="280" height="100" class="timeline-box" />
+    <circle cx="400" cy="550" r="12" class="timeline-dot" />
+    <text x="370" y="525" class="timeline-year timeline-left">2022-Present</text>
+    <text x="370" y="550" class="timeline-label timeline-left">PhD in Automation</text>
+    <text x="370" y="570" class="timeline-sublabel timeline-left">Beihang University (BUAA)</text>
+    <text x="370" y="590" class="timeline-description timeline-left">Reinforcement Learning & Robotics</text>
+    
+    <!-- Badge -->
+    <rect x="120" y="510" width="80" height="24" class="timeline-badge" />
+    <text x="160" y="522" class="timeline-badge-text">EDUCATION</text>
   </g>
   
-  <!-- 2024: Aerospace Project -->
-  <g>
-    <rect x="380" y="280" width="250" height="80" class="timeline-box" />
-    <text x="390" y="300" class="timeline-year">Apr-Oct 2024</text>
-    <text x="390" y="320" class="timeline-label">Aerospace Intelligence Project</text>
-    <text x="390" y="340" class="timeline-sublabel">Large-Scale Parallel RL</text>
-    <text x="390" y="355" class="timeline-description">Multi-Modal Large Model Training</text>
+  <!-- 2024: Aerospace Project (Right) -->
+  <g transform="translate(0,0)">
+    <rect x="420" y="600" width="280" height="100" class="timeline-box" />
+    <circle cx="400" cy="650" r="12" class="timeline-dot" />
+    <text x="430" y="625" class="timeline-year timeline-right">Apr-Oct 2024</text>
+    <text x="430" y="650" class="timeline-label timeline-right">Aerospace Intelligence Project</text>
+    <text x="430" y="670" class="timeline-sublabel timeline-right">Large-Scale Parallel RL</text>
+    <text x="430" y="690" class="timeline-description timeline-right">Multi-Modal Large Model Training</text>
+    
+    <!-- Badge -->
+    <rect x="600" y="610" width="80" height="24" class="timeline-badge" />
+    <text x="640" y="622" class="timeline-badge-text">PROJECT</text>
   </g>
   
-  <!-- Notable Achievements -->
-  <g>
-    <rect x="120" y="370" width="510" height="80" class="timeline-box" />
-    <text x="130" y="390" class="timeline-year">Notable Achievements</text>
-    <text x="130" y="410" class="timeline-description">• NIPS Aicrowd Procgen RL Challenge - Global Top 10 (2020)</text>
-    <text x="130" y="430" class="timeline-description">• Air Force "Unmanned Swarm" Challenge - Excellence Award (2023)</text>
-    <text x="130" y="450" class="timeline-description">• Multiple publications in IEEE Transactions & Aerospace Science (SCI Q1)</text>
+  <!-- Notable Achievements (Center) -->
+  <g transform="translate(0,0)">
+    <rect x="200" y="720" width="400" height="120" class="timeline-box" />
+    <circle cx="400" cy="780" r="12" class="timeline-dot" />
+    <text x="400" y="745" text-anchor="middle" class="timeline-year">Notable Achievements</text>
+    <text x="400" y="770" text-anchor="middle" class="timeline-description">• NIPS Aicrowd Procgen RL Challenge - Global Top 10 (2020)</text>
+    <text x="400" y="790" text-anchor="middle" class="timeline-description">• Air Force "Unmanned Swarm" Challenge - Excellence Award (2023)</text>
+    <text x="400" y="810" text-anchor="middle" class="timeline-description">• Multiple publications in IEEE Transactions & Aerospace Science</text>
+    
+    <!-- Badge -->
+    <rect x="360" y="730" width="80" height="24" class="timeline-badge" />
+    <text x="400" y="742" class="timeline-badge-text">AWARDS</text>
   </g>
   
   <!-- Timeline end -->
-  <circle cx="100" cy="550" r="6" fill="#3498db" />
+  <circle cx="400" cy="850" r="8" fill="url(#grad1)" />
 </svg>
