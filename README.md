@@ -16,9 +16,28 @@
 
 ## Career Timeline
 
-<img src="./timeline.svg" alt="Career Timeline" width="100%">
+### Education
+- **2022-Present**: PhD in Automation, Beihang University (BUAA)
+  - *Focus: Reinforcement Learning & Robotics*
+- **2019-2021**: Master of Engineering, Beihang University (BUAA)
+  - *Software Engineering*
+  - *Outstanding graduate student in Beijing*
+- **2014-2018**: Bachelor of Engineering, Beijing University of Technology
+  - *Measurement and Control Technology and Instruments*
+  - *Outstanding graduate thesis*
 
-*Interactive timeline of education and professional experience*
+### Professional Experience
+- **Apr-Oct 2024**: Aerospace Intelligence Project
+  - *Large-Scale Parallel RL & Multi-Modal Large Model Training*
+- **2020-2022**: Chinese Academy of Sciences, Institute of Automation
+  - *AI Competitions & Research*
+- **Jun-Sep 2019**: Beihang Software Institute
+  - *Autonomous Driving Project*
+
+### Notable Achievements
+- NIPS Aicrowd Procgen RL Challenge - Global Top 10 (2020)
+- Air Force "Unmanned Swarm" Challenge - Excellence Award (2023)
+- Multiple publications in IEEE Transactions & Aerospace Science
 
 
 ## Education Background
