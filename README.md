@@ -9,12 +9,21 @@
 - **Position:** PhD Student in Automation, Beihang University (Class of 2022)
 
 ## Photos
-<!-- Add your photos here -->
-<img src="./images/profile.jpg" alt="Profile Photo" width="200">
-*Add your profile photo above*
 
-![Project Photos](./images/project1.jpg)
-*Add project-related photos here*
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
+    <div>
+        <img src="./images/profile.jpg" alt="Profile Photo" width="200">
+        <p><em>证件照</em></p>
+    </div>
+    <div>
+        <img src="./images/life_photo1.jpg" alt="Life Photo 1" width="200">
+        <p><em>生活照 1</em></p>
+    </div>
+    <div>
+        <img src="./images/life_photo2.jpg" alt="Life Photo 2" width="200">
+        <p><em>生活照 2</em></p>
+    </div>
+</div>
 
 ---
 
