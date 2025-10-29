@@ -1,7 +1,7 @@
 # Sergio Termann
 
 ## Contact Information
-- **Phone:** 130-1101-0011
+- **Phone:** +86-13011010011
 - **Email:** shuaihao@buaa.edu.cn
 - **Location:** Haidian District, Beijing
 - **Position:** PhD Student in Automation, Beihang University (Class of 2022)
