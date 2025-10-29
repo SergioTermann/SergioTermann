@@ -18,7 +18,7 @@
 
 <img src="./timeline.svg" alt="Career Timeline" width="100%">
 
-*互动式职业发展时间线 - 展示教育背景与专业经验*
+*Interactive career timeline — education and professional experience*
 
 
 ## Education Background
