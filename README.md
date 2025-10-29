@@ -16,7 +16,7 @@
 
 ## Career Timeline
 
-<img src="./timeline.svg" alt="Career Timeline" width="100%">
+<img src="./images/timeline.png" alt="Career Timeline" width="100%">
 
 *Interactive career timeline — education and professional experience*
 
