@@ -14,6 +14,12 @@
 
 *From left to right: ID Photo | Personal Photo 1 | Personal Photo 2*
 
+## Career Timeline
+
+<img src="./timeline.svg" alt="Career Timeline" width="100%">
+
+*Interactive timeline of education and professional experience*
+
 
 ## Education Background
 

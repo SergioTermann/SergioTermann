@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .timeline-line {
+      stroke: #3498db;
+      stroke-width: 4;
+    }
+    .timeline-dot {
+      fill: #3498db;
+      stroke: #fff;
+      stroke-width: 2;
+    }
+    .timeline-dot:hover {
+      fill: #2980b9;
+      r: 12;
+    }
+    .timeline-label {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .timeline-sublabel {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      fill: #555;
+    }
+    .timeline-description {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      fill: #777;
+    }
+    .timeline-year {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      fill: #2c3e50;
+    }
+    .timeline-box {
+      fill: #f8f9fa;
+      stroke: #ddd;
+      stroke-width: 1;
+      rx: 5;
+      ry: 5;
+    }
+    .timeline-box:hover {
+      fill: #e9f7fe;
+      stroke: #3498db;
+    }
+    .timeline-title {
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      fill: #2c3e50;
+    }
+  </style>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" class="timeline-title">Sergio Termann's Career Timeline</text>
+  
+  <!-- Main timeline line -->
+  <line x1="100" y1="100" x2="100" y2="550" class="timeline-line" />
+  
+  <!-- 2014-2018: Bachelor's Degree -->
+  <g>
+    <rect x="120" y="100" width="250" height="80" class="timeline-box" />
+    <circle cx="100" cy="140" r="10" class="timeline-dot" />
+    <text x="130" y="120" class="timeline-year">2014-2018</text>
+    <text x="130" y="140" class="timeline-label">Bachelor of Engineering</text>
+    <text x="130" y="160" class="timeline-sublabel">Beijing University of Technology</text>
+    <text x="130" y="175" class="timeline-description">Measurement and Control Technology</text>
+  </g>
+  
+  <!-- 2019-2021: Master's Degree -->
+  <g>
+    <rect x="120" y="190" width="250" height="80" class="timeline-box" />
+    <circle cx="100" cy="230" r="10" class="timeline-dot" />
+    <text x="130" y="210" class="timeline-year">2019-2021</text>
+    <text x="130" y="230" class="timeline-label">Master of Engineering</text>
+    <text x="130" y="250" class="timeline-sublabel">Beihang University (BUAA)</text>
+    <text x="130" y="265" class="timeline-description">Software Engineering</text>
+  </g>
+  
+  <!-- 2019: Internship -->
+  <g>
+    <rect x="380" y="100" width="250" height="80" class="timeline-box" />
+    <circle cx="100" cy="320" r="10" class="timeline-dot" />
+    <text x="390" y="120" class="timeline-year">Jun-Sep 2019</text>
+    <text x="390" y="140" class="timeline-label">Beihang Software Institute</text>
+    <text x="390" y="160" class="timeline-sublabel">Autonomous Driving Project</text>
+    <text x="390" y="175" class="timeline-description">Unmanned Vehicle Platform Integration</text>
+  </g>
+  
+  <!-- 2020-2022: Chinese Academy of Sciences -->
+  <g>
+    <rect x="380" y="190" width="250" height="80" class="timeline-box" />
+    <circle cx="100" cy="410" r="10" class="timeline-dot" />
+    <text x="390" y="210" class="timeline-year">2020-2022</text>
+    <text x="390" y="230" class="timeline-label">Chinese Academy of Sciences</text>
+    <text x="390" y="250" class="timeline-sublabel">Institute of Automation</text>
+    <text x="390" y="265" class="timeline-description">AI Competitions & Research</text>
+  </g>
+  
+  <!-- 2022-Present: PhD -->
+  <g>
+    <rect x="120" y="280" width="250" height="80" class="timeline-box" />
+    <circle cx="100" cy="500" r="10" class="timeline-dot" />
+    <text x="130" y="300" class="timeline-year">2022-Present</text>
+    <text x="130" y="320" class="timeline-label">PhD in Automation</text>
+    <text x="130" y="340" class="timeline-sublabel">Beihang University (BUAA)</text>
+    <text x="130" y="355" class="timeline-description">Reinforcement Learning & Robotics</text>
+  </g>
+  
+  <!-- 2024: Aerospace Project -->
+  <g>
+    <rect x="380" y="280" width="250" height="80" class="timeline-box" />
+    <text x="390" y="300" class="timeline-year">Apr-Oct 2024</text>
+    <text x="390" y="320" class="timeline-label">Aerospace Intelligence Project</text>
+    <text x="390" y="340" class="timeline-sublabel">Large-Scale Parallel RL</text>
+    <text x="390" y="355" class="timeline-description">Multi-Modal Large Model Training</text>
+  </g>
+  
+  <!-- Notable Achievements -->
+  <g>
+    <rect x="120" y="370" width="510" height="80" class="timeline-box" />
+    <text x="130" y="390" class="timeline-year">Notable Achievements</text>
+    <text x="130" y="410" class="timeline-description">• NIPS Aicrowd Procgen RL Challenge - Global Top 10 (2020)</text>
+    <text x="130" y="430" class="timeline-description">• Air Force "Unmanned Swarm" Challenge - Excellence Award (2023)</text>
+    <text x="130" y="450" class="timeline-description">• Multiple publications in IEEE Transactions & Aerospace Science (SCI Q1)</text>
+  </g>
+  
+  <!-- Timeline end -->
+  <circle cx="100" cy="550" r="6" fill="#3498db" />
+</svg>
