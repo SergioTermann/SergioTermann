@@ -10,20 +10,9 @@
 
 ## Photos
 
-<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
-    <div>
-        <img src="./images/profile.jpg" alt="Profile Photo" width="200">
-        <p><em>证件照</em></p>
-    </div>
-    <div>
-        <img src="./images/life_photo1.jpg" alt="Life Photo 1" width="200">
-        <p><em>生活照 1</em></p>
-    </div>
-    <div>
-        <img src="./images/life_photo2.jpg" alt="Life Photo 2" width="200">
-        <p><em>生活照 2</em></p>
-    </div>
-</div>
+<img src="./images/profile.jpg" alt="Profile Photo" width="200"> <img src="./images/life_photo1.jpg" alt="Life Photo 1" width="200"> <img src="./images/life_photo2.jpg" alt="Life Photo 2" width="200">
+
+*From left to right: ID Photo | Personal Photo 1 | Personal Photo 2*
 
 ---
 
