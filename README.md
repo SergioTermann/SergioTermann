@@ -30,31 +30,7 @@
   </tr>
   </table>
 
-## Career Timeline
 
-<img src="./images/timeline.png" alt="Career Timeline" width="100%">
-
-*Interactive career timeline — education and professional experience*
-
-### Timeline Details (English)
-- 2022 – Present: PhD in Automation, Beihang University (BUAA)
-  - Focus: Reinforcement Learning & Robotics
-  - Research on intelligent agents and control
-- 2020 – 2022: Chinese Academy of Sciences — Institute of Automation
-  - AI Competitions & Research
-  - Procgen RL Challenge — Global Top 10 (NeurIPS 2020)
-- 2019 – 2021: Master of Engineering, Beihang University (BUAA)
-  - Software Engineering
-  - Outstanding Graduate — Beijing
-- Jun – Sep 2019: Beihang Software Institute
-  - Autonomous Driving Project
-  - Algorithm development & integration
-- 2014 – 2018: Bachelor of Engineering, Beijing University of Technology
-  - Measurement & Control Technology and Instruments
-  - Outstanding Thesis
-- Apr – Oct 2024: Aerospace Intelligence Project
-  - Large-Scale Parallel Reinforcement Learning
-  - Multi-Modal Large Model Training
 
 
 ## Education Background
