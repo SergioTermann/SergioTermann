@@ -8,12 +8,26 @@
 - **Parteimitgliedschaft:** Mitglied der Kommunistischen Partei
 
 ## Fotos
-<!-- Fügen Sie Ihre Fotos hier ein -->
-<img src="./images/profile.jpg" alt="Profilfoto" width="200">
-*Fügen Sie Ihr Profilfoto oben ein*
 
-![Projektfotos](./images/project1.jpg)
-*Fügen Sie projektbezogene Fotos hier ein*
+<table>
+  <tr>
+    <td align="center">
+      <img src="./images/profile.jpg" alt="Profilfoto" width="200"><br/>
+      <sub>Ausweisfoto</sub>
+    </td>
+    <td align="center">
+      <img src="./images/life_photo1.jpg" alt="Lebensfoto 1" width="200"><br/>
+      <sub>Persönliches Foto 1</sub>
+    </td>
+    <td align="center">
+      <img src="./images/life_photo2.jpg" alt="Lebensfoto 2" width="200"><br/>
+      <sub>Persönliches Foto 2</sub>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center"><em>Von links nach rechts: Ausweisfoto | Persönliches Foto 1 | Persönliches Foto 2</em></td>
+  </tr>
+</table>
 
 ---
 
