@@ -15,6 +15,25 @@ Ich bin Doktorand im Bereich Automatisierung an der Beihang-Universität und arb
 
 Meine aktuelle Arbeit konzentriert sich auf produktionsreife Agentensysteme mit **Planner-Executor-Workflows, hybridem RAG, Wissensgraphen, SFT, Function Calling und Feedbackschleifen**. Darüber hinaus verfüge ich über praktische Erfahrung mit Isaac Sim, verteiltem Reinforcement Learning, GPU-Clustern und lokaler LLM-Bereitstellung.
 
+## Fotos
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="./images/profile.jpg" alt="Profilfoto" width="200" /><br />
+      <sub>Profilfoto</sub>
+    </td>
+    <td align="center">
+      <img src="./images/life_photo1.jpg" alt="Persönliches Foto 1" width="200" /><br />
+      <sub>Persönliches Foto 1</sub>
+    </td>
+    <td align="center">
+      <img src="./images/life_photo2.jpg" alt="Persönliches Foto 2" width="200" /><br />
+      <sub>Persönliches Foto 2</sub>
+    </td>
+  </tr>
+</table>
+
 ## Aktuelle Schwerpunkte
 
 - Entwicklung zuverlässiger Shopping-Agenten mit Planung, Retrieval, Werkzeugnutzung und kontinuierlicher Optimierung

@@ -15,6 +15,25 @@ I am a PhD candidate in Automation at Beihang University, working at the interse
 
 My recent work focuses on production-grade agent systems built with **Planner-Executor workflows, hybrid RAG, knowledge graphs, SFT, function calling, and feedback loops**. I also have hands-on experience with Isaac Sim, distributed reinforcement learning, GPU clusters, and local LLM deployment.
 
+## Photos
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="./images/profile.jpg" alt="Profile photo" width="200" /><br />
+      <sub>Profile Photo</sub>
+    </td>
+    <td align="center">
+      <img src="./images/life_photo1.jpg" alt="Personal photo 1" width="200" /><br />
+      <sub>Personal Photo 1</sub>
+    </td>
+    <td align="center">
+      <img src="./images/life_photo2.jpg" alt="Personal photo 2" width="200" /><br />
+      <sub>Personal Photo 2</sub>
+    </td>
+  </tr>
+</table>
+
 ## Current Focus
 
 - Building reliable shopping agents with planning, retrieval, tool use, and closed-loop optimization
