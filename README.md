@@ -1,123 +1,85 @@
-# Sergio Termann
+<div align="center">
+  <img src="./images/profile.jpg" alt="Sergio Termann" width="150" />
+  <h1>Sergio Termann (Shuai Hao)</h1>
+  <p><strong>LLM Agent & Reinforcement Learning Engineer · AI Lead · PhD Candidate at Beihang University</strong></p>
+  <p>
+    <a href="mailto:shuaihao@buaa.edu.cn">Email</a> ·
+    Beijing, China ·
+    <a href="./README_DE.md">Deutsch</a>
+  </p>
+</div>
 
-[English | [Deutsch](./README_DE.md)]
+## About Me
 
-## Contact Information
-- **Phone:** +86-13011010011
-- **Email:** shuaihao@buaa.edu.cn
-- **Location:** Haidian District, Beijing
-- **Position:** PhD Student in Automation, Beihang University (Class of 2022)
+I am a PhD candidate in Automation at Beihang University, working at the intersection of **LLM agents**, **multi-agent reinforcement learning**, and **embodied intelligence**. As a co-founder and AI lead at an early-stage technology company, I own the AI roadmap from architecture and model training to deployment and delivery.
 
-## Photos
+My recent work focuses on production-grade agent systems built with **Planner-Executor workflows, hybrid RAG, knowledge graphs, SFT, function calling, and feedback loops**. I also have hands-on experience with Isaac Sim, distributed reinforcement learning, GPU clusters, and local LLM deployment.
 
-<table>
-  <tr>
-    <td align="center">
-      <img src="./images/profile.jpg" alt="Profile Photo" width="200"><br/>
-      <sub>ID Photo</sub>
-    </td>
-    <td align="center">
-      <img src="./images/life_photo1.jpg" alt="Life Photo 1" width="200"><br/>
-      <sub>Personal Photo 1</sub>
-    </td>
-    <td align="center">
-      <img src="./images/life_photo2.jpg" alt="Life Photo 2" width="200"><br/>
-      <sub>Personal Photo 2</sub>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="3" align="center"><em>From left to right: ID Photo | Personal Photo 1 | Personal Photo 2</em></td>
-  </tr>
-  </table>
+## Current Focus
 
+- Building reliable shopping agents with planning, retrieval, tool use, and closed-loop optimization
+- Training and evaluating multi-agent policies in large-scale simulation environments
+- Improving diversity and reliability in multimodal generation and long-form image captioning
 
+## Selected Experience
 
+### Beijing Fengqi Shiyu Technology Co., Ltd. · Co-founder & AI Lead
 
-## Education Background
+**Intelligent Shopping Agent**
 
-### Beihang University (BUAA) | September 2019 - December 2021
-- **Degree:** Master of Engineering
-- **Major:** Software Engineering
-- **Achievements:**
-  - Outstanding graduate student in Beijing in 2020
-  - Outstanding graduate of Beijing
-  - Part-time instructor for full-time master's students in 2019
+- Lead the company's AI strategy, system architecture, model training, and project delivery
+- Designed a Planner-Executor pipeline integrating hybrid RAG, product knowledge graphs, function calling, and user-feedback loops
+- Established SFT data-generation and quality-gating workflows and delivered local model deployment
+- Supported the product's commercial validation and an investment from Tsinghua Lihe, at a valuation of approximately RMB 40 million
 
-### Beijing University of Technology | September 2014 - June 2018
-- **Degree:** Bachelor of Engineering
-- **Major:** Measurement and Control Technology and Instruments
-- **Achievements:**
-  - Outstanding graduate thesis, school-level science and technology competition first prize, second prize, and multiple awards
-  - Former president of the Optical Society student branch, former director of the Beijing University of Technology Club Department
-  - Member of the Beijing University of Technology Aviation Team
+### Aerospace Science and Industry Intelligent Research Institute · Research Intern
 
----
+**Multi-Agent Reinforcement Learning with Isaac Sim · Apr 2024 - Oct 2024**
 
-## Internship and Project Experience
+- Built parallel simulation environments for UAV and quadruped-robot teams
+- Adapted environments, algorithms, and training pipelines for GPU-cluster deployment
+- Created reusable workflows for large-scale reinforcement learning training and evaluation
 
-### Beihang Software Institute Autonomous Driving Project Team & Zhongguancun AI Innovation and Entrepreneurship Base
-**Duration:** June 2019 - September 2019
+### National Science and Technology Innovation 2030 Major Project
 
-#### Unmanned Vehicle Teaching Platform Integration and Control Code Implementation
-- Implemented real-time communication and control mechanism integration using STM32 microcontroller
-- Achieved control signal output and prediction for Apollo platform, ensuring platform stability during testing and reducing accidents through the use of launch tube management
+**Decision-Making in Highly Dynamic Adversarial Environments · Mar 2020 - Mar 2022**
 
-### Chinese Academy of Sciences Institute of Automation - Zhao Dongbin Team
-**Duration:** March 2020 - March 2022
+- Developed expert-demonstration collection tools using Harfang3D Dogfight
+- Built multi-aircraft combat scenarios and reproducible pipelines for training and benchmark evaluation
 
-#### International Competition AI Micromanipulation Confrontation
-- Implemented parallel sampling construction using multiprocessing and zeromq microservices, significantly improving sampling efficiency
+### Institute of Automation, Chinese Academy of Sciences · Zhao Dongbin Group
 
-#### Robomaster AI Competition Simulation
-- Implemented our team's unmanned comprehensive map navigation. In the Robomaster AI competition, the automated team achieved comprehensive simulation of all three competition venues nationwide
+**StarCraft AI Micromanagement & RoboMaster Navigation · Mar 2020 - Mar 2022**
 
-### National Key R&D Program '2030' Major Project
-**Duration:** March 2020 - March 2022
+- Developed a parallel reinforcement learning sampling system with Python multiprocessing and ZeroMQ
+- Implemented collision-free full-map navigation for RoboMaster robots; the approach was reused by later teams that won first prizes in three national tracks
 
-#### High-Performance Reinforcement Learning Decision-Making Under Complex Environments for Anti-Network Countermeasures - Beijing Section
-- Built combat environment based on harfang dogfight air combat, designed human-machine experience collection programs and multi-machine combat scenarios, completed program development and open-sourced it
+## Research & Competitions
 
-### Aerospace Intelligent Courtyard Body Intelligence Project
-**Duration:** April 2024 - October 2024
+- **ICML 2026, second author** — *Escaping the Likelihood Trap: Geometric Diversity Optimization for Long-Form Image Captioning*
+- Published research in **IEEE Transactions on Cognitive and Developmental Systems**, **Aerospace Science and Technology**, **Guidance, Navigation and Control**, and **ICICIP**
+- **NeurIPS 2020 AIcrowd Procgen Challenge** — global 10th in the warm-up, 7th in Round 1, and top 16 in Round 2
+- **2023 Air Force Unmanned Swarm Challenge, 2v2 track** — Excellence Award
 
-#### Large-Scale Parallel Reinforcement Learning Chemical Training Environment Construction and Optimization Based on IsaacSim
-- Designed large-scale parallel robot groups, implemented multi-robot group training in various simulation environments, achieving large-scale GPU cluster parallel optimization of reinforcement learning algorithms
+## Technical Toolkit
 
-#### Multi-Modal Large Model Parallel Robot Decision-Making and Training
-- Implemented large-scale language model decision-making prediction based on multi-modal large model simulation learning, large-scale robot parallel deployment
+| Area | Technologies |
+| --- | --- |
+| LLM agents | Planner-Executor, hybrid RAG, SFT, function calling, knowledge graphs |
+| Reinforcement learning | Multi-agent RL, imitation learning, adversarial decision-making, Ray, RLlib |
+| Engineering & simulation | Python, ZeroMQ, Isaac Sim, GPU clusters |
+| Applications & deployment | Dify, Xinference, Ollama, local LLM deployment |
+
+## Education
+
+- **PhD in Automation**, Beihang University, 2022 - present
+- **MEng in Software Engineering**, Beihang University, 2019 - 2021  
+  Outstanding Graduate Student of Beihang University · Outstanding Graduate of Beijing
+- **BEng in Measurement and Control Technology and Instruments**, Beijing Institute of Technology, 2014 - 2018  
+  Outstanding Undergraduate Thesis · First and second prizes in university science and technology competitions
 
 ---
 
-## Competition Experience
-
-### 2020 NIPS Aicrowd Procgen Reinforcement Learning Challenge
-**Duration:** July 2020 - November 2020
-- **Achievement:** Completed multiple reinforcement learning algorithms, achieving Ray and RLlib-based code framework implementation and optimization, defining new wrapper implementation and multiple data augmentation methods. The team achieved global top ten results, first place globally, and third place globally in the top six rankings
-
-### 2023 Air Force "Unmanned Swarm" Challenge Competition Excellence Award 2V2
-**Duration:** July 2023 - August 2023
-- **Achievement:** Completed algorithm optimization and simulation
-
----
-
-## Research Publications
-
-Published multiple papers in **IEEE Transactions on Cognitive and Developmental Systems (SCI Q1)**, **Aerospace Science and Technology (SCI Q1)**, **Guidance, Navigation and Control (ESCI)** and other journals, as well as presentations at **International Conference on Intelligent Control and Information Processing** and other conferences.
-
----
-
-## Professional Skills and Others
-
-### Technical Skills
-- **Programming Languages & Tools:** Proficient in Dify, Ollama and other large model tools, familiar with IsaacSim and other embodied intelligence platforms, with strong practical experience in artificial intelligence applications in robotics
-- **Reading & Research:** Extensive reading habits, read over 200 academic papers and books, physically strong with over 2000 hours of table tennis training experience
-
-### Interests
-- Artificial Intelligence and Robotics
-- Reinforcement Learning and Multi-Agent Systems
-- Autonomous Systems and Control
-- Academic Research and Innovation
-
----
-
-*This README provides an overview of Sergio Termann's academic and professional background. For more detailed information, please contact via the provided email address.*
+<div align="center">
+  <a href="mailto:shuaihao@buaa.edu.cn">shuaihao@buaa.edu.cn</a>
+</div>

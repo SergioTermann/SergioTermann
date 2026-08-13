@@ -1,121 +1,85 @@
-# Sergio Termann
+<div align="center">
+  <img src="./images/profile.jpg" alt="Sergio Termann" width="150" />
+  <h1>Sergio Termann (Shuai Hao)</h1>
+  <p><strong>LLM-Agenten & Reinforcement Learning · AI-Leiter · Doktorand an der Beihang-Universität</strong></p>
+  <p>
+    <a href="mailto:shuaihao@buaa.edu.cn">E-Mail</a> ·
+    Peking, China ·
+    <a href="./README.md">English</a>
+  </p>
+</div>
 
-## Kontaktinformationen
-- **Telefon:** 130-1101-0011
-- **E-Mail:** shuaihao@buaa.edu.cn
-- **Standort:** Haidian Bezirk, Peking
-- **Position:** Doktorand in Automatisierung, Beihang Universität (Jahrgang 2022)
-- **Parteimitgliedschaft:** Mitglied der Kommunistischen Partei
+## Über mich
 
-## Fotos
+Ich bin Doktorand im Bereich Automatisierung an der Beihang-Universität und arbeite an der Schnittstelle von **LLM-Agenten**, **Multi-Agenten-Reinforcement-Learning** und **Embodied Intelligence**. Als Mitgründer und AI-Leiter eines jungen Technologieunternehmens verantworte ich die KI-Roadmap von der Architektur und dem Modelltraining bis zur Bereitstellung und Projektauslieferung.
 
-<table>
-  <tr>
-    <td align="center">
-      <img src="./images/profile.jpg" alt="Profilfoto" width="200"><br/>
-      <sub>Ausweisfoto</sub>
-    </td>
-    <td align="center">
-      <img src="./images/life_photo1.jpg" alt="Lebensfoto 1" width="200"><br/>
-      <sub>Persönliches Foto 1</sub>
-    </td>
-    <td align="center">
-      <img src="./images/life_photo2.jpg" alt="Lebensfoto 2" width="200"><br/>
-      <sub>Persönliches Foto 2</sub>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="3" align="center"><em>Von links nach rechts: Ausweisfoto | Persönliches Foto 1 | Persönliches Foto 2</em></td>
-  </tr>
-</table>
+Meine aktuelle Arbeit konzentriert sich auf produktionsreife Agentensysteme mit **Planner-Executor-Workflows, hybridem RAG, Wissensgraphen, SFT, Function Calling und Feedbackschleifen**. Darüber hinaus verfüge ich über praktische Erfahrung mit Isaac Sim, verteiltem Reinforcement Learning, GPU-Clustern und lokaler LLM-Bereitstellung.
 
----
+## Aktuelle Schwerpunkte
 
-## Bildungshintergrund
+- Entwicklung zuverlässiger Shopping-Agenten mit Planung, Retrieval, Werkzeugnutzung und kontinuierlicher Optimierung
+- Training und Evaluation von Multi-Agenten-Strategien in großskaligen Simulationsumgebungen
+- Verbesserung von Vielfalt und Zuverlässigkeit bei multimodaler Generierung und ausführlicher Bildbeschreibung
 
-### Beihang Universität (BUAA) | September 2019 - Dezember 2021
-- **Abschluss:** Master of Engineering
-- **Hauptfach:** Softwaretechnik
-- **Erfolge:**
-  - Herausragender Absolvent in Peking im Jahr 2020
-  - Herausragender Absolvent von Peking
-  - Teilzeit-Dozent für Vollzeit-Masterstudenten im Jahr 2019
+## Ausgewählte Berufserfahrung
 
-### Technische Universität Peking | September 2014 - Juni 2018
-- **Abschluss:** Bachelor of Engineering
-- **Hauptfach:** Mess- und Regelungstechnik und Instrumente
-- **Erfolge:**
-  - Herausragende Abschlussarbeit, schulweiter Wissenschafts- und Technologiewettbewerb erster Preis, zweiter Preis und mehrere Auszeichnungen
-  - Ehemaliger Präsident der Optical Society Studentenzweigstelle, ehemaliger Direktor der Abteilung für Clubs der Technischen Universität Peking
-  - Mitglied des Luftfahrtteams der Technischen Universität Peking
+### Beijing Fengqi Shiyu Technology Co., Ltd. · Mitgründer & AI-Leiter
 
----
+**Intelligenter Shopping-Agent**
 
-## Praktikums- und Projekterfahrung
+- Verantwortung für KI-Strategie, Systemarchitektur, Modelltraining und Projektauslieferung
+- Entwicklung einer Planner-Executor-Pipeline mit hybridem RAG, Produktwissensgraph, Function Calling und Nutzerfeedback
+- Aufbau von Workflows zur SFT-Datenerzeugung und Qualitätssicherung sowie lokale Modellbereitstellung
+- Beitrag zur kommerziellen Validierung und zu einem Investment durch Tsinghua Lihe bei einer Bewertung von rund 40 Millionen RMB
 
-### Beihang Software Institut Autonomes Fahren Projektteam & Zhongguancun KI-Innovations- und Gründerbasis
-**Zeitraum:** Juni 2019 - September 2019
+### Aerospace Science and Industry Intelligent Research Institute · Forschungspraktikant
 
-#### Integration der unbemannten Fahrzeug-Lehrplattform und Implementierung des Steuerungscodes
-- Implementierung der Integration von Echtzeit-Kommunikations- und Steuerungsmechanismen mit STM32-Mikrocontroller
-- Erreichte Steuerungssignalausgabe und -vorhersage für die Apollo-Plattform, Gewährleistung der Plattformstabilität während des Tests und Reduzierung von Unfällen durch den Einsatz von Startröhrenmanagement
+**Multi-Agenten-Reinforcement-Learning mit Isaac Sim · Apr. 2024 - Okt. 2024**
 
-### Chinesische Akademie der Wissenschaften Institut für Automatisierung - Team Zhao Dongbin
-**Zeitraum:** März 2020 - März 2022
+- Aufbau paralleler Simulationsumgebungen für UAV- und Quadruped-Roboterteams
+- Anpassung von Umgebungen, Algorithmen und Trainingspipelines für GPU-Cluster
+- Entwicklung wiederverwendbarer Abläufe für großskaliges RL-Training und Evaluation
 
-#### Internationaler Wettbewerb KI-Mikromanipulation Konfrontation
-- Implementierung paralleler Stichprobenkonstruktion mit Multiprocessing und Zeromq-Mikrodiensten, deutliche Verbesserung der Stichprobeneffizienz
+### Nationales Großprojekt „Wissenschafts- und Technologieinnovation 2030“
 
-#### Robomaster KI-Wettbewerb Simulation
-- Implementierung der umfassenden Kartennavigation unseres Teams. Im Robomaster KI-Wettbewerb erreichte das automatisierte Team eine umfassende Simulation aller drei Wettkampfstätten landesweit
+**Entscheidungsfindung in hochdynamischen adversarialen Umgebungen · März 2020 - März 2022**
 
-### Nationales Schlüssel-F&E-Programm '2030' Großprojekt
-**Zeitraum:** März 2020 - März 2022
+- Entwicklung von Werkzeugen zur Erfassung von Expertendemonstrationen mit Harfang3D Dogfight
+- Aufbau von Mehrflugzeug-Kampfszenarien und reproduzierbaren Pipelines für Training und Benchmark-Evaluation
 
-#### Hochleistungs-Reinforcement-Learning-Entscheidungsfindung unter komplexen Umgebungen für Anti-Netzwerk-Gegenmaßnahmen - Peking-Sektion
-- Aufbau einer Kampfumgebung basierend auf Harfang-Dogfight-Luftkampf, Entwicklung von Programmen zur Erfassung von Mensch-Maschine-Erfahrungen und Multi-Maschinen-Kampfszenarien, Abschluss der Programmentwicklung und Open-Source-Veröffentlichung
+### Institut für Automatisierung, Chinesische Akademie der Wissenschaften · Gruppe Zhao Dongbin
 
-### Luft- und Raumfahrt Intelligentes Hofprojekt für Körperintelligenz
-**Zeitraum:** April 2024 - Oktober 2024
+**StarCraft-KI-Mikromanagement & RoboMaster-Navigation · März 2020 - März 2022**
 
-#### Großskalige parallele Reinforcement-Learning-Chemische Trainingsumgebungskonstruktion und -optimierung basierend auf IsaacSim
-- Entwurf großskaliger paralleler Robotergruppen, Implementierung von Multi-Roboter-Gruppentraining in verschiedenen Simulationsumgebungen, Erreichen großskaliger GPU-Cluster-Paralleloptimierung von Reinforcement-Learning-Algorithmen
+- Entwicklung eines parallelen RL-Samplingsystems mit Python Multiprocessing und ZeroMQ
+- Implementierung einer kollisionsfreien Navigation über die gesamte Karte für RoboMaster-Roboter; der Ansatz wurde von späteren Teams wiederverwendet, die in drei nationalen Disziplinen erste Preise gewannen
 
-#### Multi-Modale Großmodell-Parallele Roboter-Entscheidungsfindung und -Training
-- Implementierung von großskaligen Sprachmodell-Entscheidungsvorhersagen basierend auf multimodalem Großmodell-Simulationslernen, großskalige parallele Roboterbereitstellung
+## Forschung & Wettbewerbe
+
+- **ICML 2026, Zweitautor** — *Escaping the Likelihood Trap: Geometric Diversity Optimization for Long-Form Image Captioning*
+- Publikationen in **IEEE Transactions on Cognitive and Developmental Systems**, **Aerospace Science and Technology**, **Guidance, Navigation and Control** sowie bei **ICICIP**
+- **NeurIPS 2020 AIcrowd Procgen Challenge** — weltweit Platz 10 im Warm-up, Platz 7 in Runde 1 und Top 16 in Runde 2
+- **Air Force Unmanned Swarm Challenge 2023, 2v2** — Excellence Award
+
+## Technisches Profil
+
+| Bereich | Technologien |
+| --- | --- |
+| LLM-Agenten | Planner-Executor, hybrides RAG, SFT, Function Calling, Wissensgraphen |
+| Reinforcement Learning | Multi-Agenten-RL, Imitation Learning, adversariale Entscheidungsfindung, Ray, RLlib |
+| Engineering & Simulation | Python, ZeroMQ, Isaac Sim, GPU-Cluster |
+| Anwendungen & Bereitstellung | Dify, Xinference, Ollama, lokale LLM-Bereitstellung |
+
+## Ausbildung
+
+- **Promotion in Automatisierung**, Beihang-Universität, 2022 - heute
+- **MEng in Software Engineering**, Beihang-Universität, 2019 - 2021  
+  Ausgezeichneter Absolvent der Beihang-Universität · Ausgezeichneter Absolvent der Stadt Peking
+- **BEng in Mess- und Regelungstechnik**, Beijing Institute of Technology, 2014 - 2018  
+  Ausgezeichnete Bachelorarbeit · Erster und zweiter Preis bei universitären Wissenschafts- und Technologiewettbewerben
 
 ---
 
-## Wettbewerbserfahrung
-
-### 2020 NIPS Aicrowd Procgen Reinforcement Learning Challenge
-**Zeitraum:** Juli 2020 - November 2020
-- **Erfolg:** Abschluss mehrerer Reinforcement-Learning-Algorithmen, Erreichen von Ray- und RLlib-basierter Code-Framework-Implementierung und -Optimierung, Definition neuer Wrapper-Implementierung und mehrerer Datenaugmentierungsmethoden. Das Team erreichte globale Top-Ten-Ergebnisse, den ersten Platz weltweit und den dritten Platz weltweit in den Top-Sechs-Rankings
-
-### 2023 Luftwaffe "Unbemannte Schwarm" Challenge-Wettbewerb Exzellenzpreis 2V2
-**Zeitraum:** Juli 2023 - August 2023
-- **Erfolg:** Abschluss der Algorithmusoptimierung und -simulation
-
----
-
-## Forschungspublikationen
-
-Veröffentlichung mehrerer Artikel in **IEEE Transactions on Cognitive and Developmental Systems (SCI Q1)**, **Aerospace Science and Technology (SCI Q1)**, **Guidance, Navigation and Control (ESCI)** und anderen Zeitschriften, sowie Präsentationen bei der **International Conference on Intelligent Control and Information Processing** und anderen Konferenzen.
-
----
-
-## Berufliche Fähigkeiten und Sonstiges
-
-### Technische Fähigkeiten
-- **Programmiersprachen & Tools:** Kenntnisse in Dify, Ollama und anderen großen Modellwerkzeugen, vertraut mit IsaacSim und anderen verkörperten Intelligenzplattformen, mit starker praktischer Erfahrung in Anwendungen künstlicher Intelligenz in der Robotik
-- **Lesen & Forschung:** Umfangreiche Lesegewohnheiten, über 200 akademische Artikel und Bücher gelesen, körperlich stark mit über 2000 Stunden Tischtennistrainingserfahrung
-
-### Interessen
-- Künstliche Intelligenz und Robotik
-- Reinforcement Learning und Multi-Agenten-Systeme
-- Autonome Systeme und Steuerung
-- Akademische Forschung und Innovation
-
----
-
-*Diese README bietet einen Überblick über den akademischen und beruflichen Hintergrund von Sergio Termann. Für detailliertere Informationen kontaktieren Sie bitte über die angegebene E-Mail-Adresse.*
+<div align="center">
+  <a href="mailto:shuaihao@buaa.edu.cn">shuaihao@buaa.edu.cn</a>
+</div>
