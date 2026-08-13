@@ -5,7 +5,8 @@
   <p>
     <a href="mailto:shuaihao@buaa.edu.cn">E-Mail</a> ·
     Peking, China ·
-    <a href="./README.md">English</a>
+    <a href="./README.md">English</a> ·
+    <a href="./README_ZH.md">中文</a>
   </p>
 </div>
 
@@ -26,10 +27,6 @@ Meine aktuelle Arbeit konzentriert sich auf produktionsreife Agentensysteme mit 
     <td align="center">
       <img src="./images/life_photo1.jpg" alt="Persönliches Foto 1" width="200" /><br />
       <sub>Persönliches Foto 1</sub>
-    </td>
-    <td align="center">
-      <img src="./images/life_photo2.jpg" alt="Persönliches Foto 2" width="200" /><br />
-      <sub>Persönliches Foto 2</sub>
     </td>
   </tr>
 </table>

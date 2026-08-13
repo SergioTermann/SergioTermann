@@ -5,6 +5,7 @@
   <p>
     <a href="mailto:shuaihao@buaa.edu.cn">Email</a> ·
     Beijing, China ·
+    <a href="./README_ZH.md">中文</a> ·
     <a href="./README_DE.md">Deutsch</a>
   </p>
 </div>
@@ -26,10 +27,6 @@ My recent work focuses on production-grade agent systems built with **Planner-Ex
     <td align="center">
       <img src="./images/life_photo1.jpg" alt="Personal photo 1" width="200" /><br />
       <sub>Personal Photo 1</sub>
-    </td>
-    <td align="center">
-      <img src="./images/life_photo2.jpg" alt="Personal photo 2" width="200" /><br />
-      <sub>Personal Photo 2</sub>
     </td>
   </tr>
 </table>
