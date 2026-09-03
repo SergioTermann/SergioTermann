@@ -1,87 +1,96 @@
 <div align="center">
+  <img src="./images/profile.jpg" alt="Profile photo" width="168" />
   <h1>Sergio Termann (Shuai Hao)</h1>
-  <p><strong>AI Agent Systems · Multi-Agent Reinforcement Learning · Embodied Intelligence</strong></p>
-  <p>Co-founder & AI Lead · PhD Candidate at Beihang University</p>
+  <p><strong>Algorithm Engineer · LLM Agents / Post-training / Multi-Agent Reinforcement Learning</strong></p>
+  <p>PhD Candidate, Beihang University · AI Team Lead</p>
   <p>
     <a href="mailto:shuaihao@buaa.edu.cn">Email</a> ·
     Beijing, China ·
+    <a href="https://github.com/SergioTermann">GitHub</a> ·
     <a href="./README_ZH.md">中文</a> ·
     <a href="./README_DE.md">Deutsch</a>
   </p>
-  <img src="./images/profile.jpg" alt="Profile photo" width="170" />
-  &nbsp;&nbsp;
-  <img src="./images/life_photo1.jpg" alt="Personal photo" width="170" />
 </div>
 
-## Profile
+## Core Positioning
 
-I am a PhD candidate in Automation at Beihang University and a hands-on AI lead working across **LLM agents, multi-agent reinforcement learning, and embodied intelligence**. I take AI products from technical strategy and system architecture through model training, deployment, and delivery.
+Algorithm engineer focused on LLM agents and reinforcement-learning post-training. I work in closed loops: problem definition, data construction, model training, offline evaluation, online inference, and metric-driven iteration. I currently lead AI development at a startup while pursuing a PhD at Beihang University.
 
-My current work centers on production-grade agent systems built with Planner-Executor workflows, hybrid RAG, product knowledge graphs, SFT, function calling, and feedback loops. I also work with Isaac Sim, distributed reinforcement learning, GPU clusters, and local LLM deployment.
+Core strengths: agentic RL post-training, process reward models and trajectory governance, multi-agent reinforcement learning, large-scale training and evaluation infrastructure, and local deployment on vLLM/GPU clusters.
 
-## Highlights
-
-- **AI leadership:** Co-founded a technology company and led the architecture and delivery of an intelligent shopping agent; the project supported an investment from Tsinghua Lihe at a valuation of approximately RMB 40 million
-- **Research:** Second author of an ICML 2026 paper on geometric diversity optimization for long-form image captioning
-- **RL engineering:** Built reusable multi-agent simulation, training, and evaluation pipelines on Isaac Sim and GPU clusters
-- **Competition:** Placed 7th globally in Round 1 of the NeurIPS 2020 AIcrowd Procgen Challenge and received an Excellence Award in the 2023 Air Force Unmanned Swarm Challenge
-
-## Expertise
+## Technical Stack
 
 | Area | Methods & Tools |
 | --- | --- |
-| LLM agents | Planner-Executor, hybrid RAG, SFT, function calling, knowledge graphs |
-| Reinforcement learning | Multi-agent RL, imitation learning, adversarial decision-making, Ray, RLlib |
-| Simulation & systems | Python, ZeroMQ, Isaac Sim, distributed sampling, GPU clusters |
-| Deployment | Dify, Xinference, Ollama, local LLM deployment |
+| LLM post-training | RLVR / GRPO / GSPO, SFT / DPO, reward engineering, PRM / PVM, Best-of-N |
+| Agent systems | Planner-Executor, hybrid RAG, function calling, MCP / A2A, context engineering, SWE-bench |
+| Reinforcement learning | PPO / SAC / GAIL, multi-agent RL, Ray / RLlib, AReaL, TRL, LoRA |
+| Inference & deployment | vLLM, Ollama, Xinference, Dify, GPU clusters, Isaac Sim / Isaac Lab, Harfang DogFight |
 
-## Selected Experience
+## Selected Projects
 
-### Beijing Fengqi Shiyu Technology Co., Ltd. · Co-founder & AI Lead
+### Production Agent for Intelligent Operations · 2025 - Present
 
-**Intelligent Shopping Agent**
+**Beijing Fengqi Shiyu Technology Co., Ltd. · Co-founder / AI Team Lead / Project Owner**
 
-- Own the AI roadmap, system architecture, model training, and project delivery
-- Designed a Planner-Executor pipeline combining hybrid RAG, a product knowledge graph, function calling, and user-feedback loops
-- Established SFT data-generation and quality-gating workflows and delivered local model deployment
+- Led a Planner-Executor architecture with hybrid RAG, function-calling tooling, and automatic failure-case recycling to build a data flywheel across collection, training, evaluation, deployment, and feedback.
+- Trained a Qwen3-8B LoRA model with TRL GRPOTrainer + vLLM using RLVR/GRPO; built field-level reward scoring, Chinese-English equivalence checks, and reduced 9,215 training samples to 2,310 high-value examples.
+- Online impact: ticket closure rate +12.4%, first-fix success +8.7%, self-service diagnosis closure +18.5%; tool hallucination 6.8%→2.9%, TTFT P50 860ms→810ms; supported an investment from Tsinghua Lihe at an approximately RMB 40 million valuation.
+- Decoupled volatile knowledge from model weights, introduced five data gates, DAPO dynamic sampling, and an SFT→GRPO curriculum, reducing iteration time from 1-2 days to under half a day.
 
-### Aerospace Science and Industry Intelligent Research Institute · Research Intern
+### Process Value Modeling for Long-Horizon Coding Agents · 2026 - Present
 
-**Multi-Agent Reinforcement Learning with Isaac Sim · Apr 2024 - Oct 2024**
+**Prefix Value Model · First author · TNNLS under review**
 
-- Built parallel simulation environments for UAV and quadruped-robot teams
-- Adapted environments, algorithms, and training pipelines for GPU-cluster deployment
-- Created reusable workflows for large-scale reinforcement learning training and evaluation
+- Learned success probabilities over observable process states using terminal outcome supervision only, supporting Best-of-N selection, inference-time early abandonment, and outcome predictability analysis.
+- Achieved SWE-bench-Lite selection performance of 0.926±0.049, approaching a verifier oracle of 0.931 and exceeding majority voting at 0.826 and trajectory-level PRM at 0.901, with no extra test execution overhead.
+- Early abandonment of low-success rollouts saved roughly 15% end-to-end inference compute with near-zero accuracy loss; terminal outcomes became reliably predictable by round 3, with AUC improving from 0.73 to 0.95.
+- Built a vLLM trajectory-collection and tensor-parallel inference system for controllable 72B evaluation on dual 48GB GPUs; LoRA rejection-sampling fine-tuning improved single-pass repair success from 0.375 to 0.800.
 
-### National Science and Technology Innovation 2030 Major Project
+### Reinforcement Learning for Multimodal Models · 2024 - 2026
 
-**Decision-Making in Highly Dynamic Adversarial Environments · Mar 2020 - Mar 2022**
+**ICML 2026 · Second author**
 
-- Developed expert-demonstration collection tools using Harfang3D Dogfight
-- Built multi-aircraft combat scenarios and reproducible training and benchmark pipelines
+- Proposed a geometric diversity objective that incorporates representation-space dispersion into long-form image-caption training, reducing output convergence and improving detail coverage.
+- Co-designed a multidimensional evaluation protocol covering detail, diversity, and factuality; ran multi-benchmark experiments and ablations. The method transfers to multimodal LLM RL post-training with GRPO/RLVR.
 
-### Institute of Automation, Chinese Academy of Sciences · Zhao Dongbin Group
+### Human-Guided Autonomous UAV Air Combat · Jan 2024 - Mar 2025
 
-**StarCraft AI Micromanagement & RoboMaster Navigation · Mar 2020 - Mar 2022**
+**Aerospace Science and Industry Intelligent Research Institute · Algorithm Intern · IEEE SMC Magazine first author accepted**
 
-- Developed a parallel reinforcement learning sampling system with Python multiprocessing and ZeroMQ
-- Implemented collision-free full-map navigation for RoboMaster robots; the approach was reused by later teams that won first prizes in three national tracks
+- Built a Harfang 3D + Dogfight2 human-machine combat platform from scratch, including aerodynamics/collision solving, OpenAI Gym wrappers, a PyQt5 experiment interface, and PPO/SAC training with TensorBoard monitoring across 1v1 to 25v25 scenarios.
+- Collected 2.7 hours of expert demonstrations (~100k timesteps), used GAIL for cold-start imitation and PPO for real-reward fine-tuning, improving kill rate by 2.3x over SOTA and reducing engagement time by 30%.
+- Built Isaac Lab attack-defense scenarios, vectorized parallel environments, a Blender→USD asset pipeline, ACMI 2.2 telemetry bridging, and Tacview replay.
 
-## Research & Recognition
+### Multi-Agent RL Training Infrastructure · Mar 2020 - Mar 2022
 
-- **ICML 2026, second author** — *Escaping the Likelihood Trap: Geometric Diversity Optimization for Long-Form Image Captioning*
-- Publications in **IEEE Transactions on Cognitive and Developmental Systems**, **Aerospace Science and Technology**, **Guidance, Navigation and Control**, and **ICICIP**
-- **NeurIPS 2020 AIcrowd Procgen Challenge** — 10th globally in the warm-up, 7th in Round 1, and top 16 in Round 2
-- **2023 Air Force Unmanned Swarm Challenge, 2v2 track** — Excellence Award
+**Institute of Automation, Chinese Academy of Sciences · Zhao Dongbin Group · Algorithm Intern**
+
+- Designed QIARL representation learning with Q-irrelevance state abstraction and validated it across multiple Procgen environments and settings in both PyTorch and TensorFlow.
+- Built a learner-actor parallel sampling architecture and migrated it to Ray/RLlib, increasing parallel sampling throughput by an order of magnitude over single-machine training.
+- Reproduced and adapted SMAC, pymarl/pymarl2, RLlib×SC2, and MADDPG×MPE training and evaluation baselines.
+
+## Publications
+
+- **[First author · accepted]** IEEE Systems, Man, and Cybernetics Magazine, 2026: *Human-Guided Autonomous Learning for UAV Air Combat Decision Optimization*
+- **[First author · under review]** TNNLS: *Outcome-Supervised Prefix Value Models for Best-of-N Selection and Early Abandonment in Long-Horizon Coding Agents*
+- **[Second author]** ICML 2026: *Escaping the Likelihood Trap: Geometric Diversity Optimization for Long-Form Image Captioning*
+- **[First author]** ICICIP 2021: *Learning Representation with Q-irrelevance Abstraction for Reinforcement Learning*
+- **[Co-author]** IEEE Transactions on Cognitive and Developmental Systems, 2023: SCQRL; additional publications in Aerospace Science and Technology and Guidance, Navigation and Control
+
+## Competitions & Honors
+
+- **NeurIPS 2020 AIcrowd Procgen Reinforcement Learning Challenge**: led algorithm development, Ray/RLlib trainer modification, data augmentation, and hyperparameter search over 12 Procgen environments; 7th of 82 teams in Round 1 and first among universities.
+- **2023 Air Force "Unmanned Swarm" Challenge, 2v2 simulation track**: Excellence Award, first among non-military universities.
 
 ## Education
 
-- **PhD Candidate in Automation**, Beihang University, 2022 - present
-- **MEng in Software Engineering**, Beihang University, 2019 - 2021  
-  Outstanding Graduate Student of Beihang University · Outstanding Graduate of Beijing
-- **BEng in Measurement and Control Technology and Instruments**, Beijing Institute of Technology, 2014 - 2018  
-  Outstanding Undergraduate Thesis · First and second prizes in university science and technology competitions
+- **Beihang University**, School of Automation Science and Electrical Engineering, PhD Candidate, Sep 2022 - Present
+- **Beihang University**, School of Software, MEng, Sep 2019 - Dec 2021  
+  Outstanding Graduate of Beijing · Outstanding Graduate Student of Beihang University
+- **Beijing Institute of Technology**, School of Optics and Photonics, BEng, Sep 2014 - Jun 2018  
+  Outstanding Undergraduate Thesis · Three first prizes in university science and technology competitions as first author
 
 <div align="center">
-  <sub>Open to research and engineering collaboration in AI agents, reinforcement learning, and embodied intelligence.</sub>
+  <sub>Focused on LLM agents, RL post-training, multi-agent reinforcement learning, and production inference systems.</sub>
 </div>

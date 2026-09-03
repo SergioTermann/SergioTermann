@@ -1,87 +1,96 @@
 <div align="center">
-  <h1>郝帅（Sergio Termann）</h1>
-  <p><strong>大模型 Agent · 多智能体强化学习 · 具身智能</strong></p>
-  <p>合伙人 / AI 负责人 · 北京航空航天大学博士研究生</p>
+  <img src="./images/profile.jpg" alt="郝帅" width="168" />
+  <h1>郝帅</h1>
+  <p><strong>算法工程师 · 大模型 Agent / LLM 后训练 / 多智能体强化学习</strong></p>
+  <p>北京航空航天大学自动化科学与电气工程学院博士研究生 · AI Team Lead</p>
   <p>
     <a href="mailto:shuaihao@buaa.edu.cn">邮箱</a> ·
     中国北京 ·
+    <a href="https://github.com/SergioTermann">GitHub</a> ·
     <a href="./README.md">English</a> ·
     <a href="./README_DE.md">Deutsch</a>
   </p>
-  <img src="./images/profile.jpg" alt="个人证件照" width="170" />
-  &nbsp;&nbsp;
-  <img src="./images/life_photo1.jpg" alt="个人生活照" width="170" />
 </div>
 
-## 个人简介
+## 核心定位
 
-北京航空航天大学自动化学院博士研究生，长期从事**大模型 Agent、多智能体强化学习与具身智能**研发。作为初创科技公司的合伙人和 AI 负责人，负责从技术路线、系统架构、模型训练到工程部署与项目交付的完整流程。
+面向大模型 Agent 与强化学习后训练的算法工程师，习惯按“问题定义、数据构造、模型训练、离线评测、在线推理、指标回流”的闭环推进。当前以 AI Team Lead 身份负责生产级 Agent 系统，同时在北京航空航天大学攻读博士学位。
 
-近期工作聚焦于基于 Planner-Executor、混合 RAG、商品知识图谱、SFT、Function Calling 与反馈闭环的生产级 Agent 系统，同时具备 Isaac Sim、分布式强化学习、GPU 集群和大模型本地化部署经验。
+主线能力集中在：Agentic RL 后训练、过程奖励模型与轨迹治理、多智能体强化学习、大规模训练与评测基础设施，以及 vLLM/GPU 集群上的本地化部署。
 
-## 核心亮点
-
-- **AI 技术负责人：** 联合创办科技公司并主导智能导购 Agent 的架构与交付；项目助力公司获得清华力合投资，估值约 4000 万元
-- **科研成果：** ICML 2026 论文第二作者，研究长文本图像描述的几何多样性优化
-- **强化学习工程：** 基于 Isaac Sim 和 GPU 集群搭建可复用的多智能体仿真、训练与评测流程
-- **竞赛成绩：** NeurIPS 2020 AIcrowd Procgen 挑战赛第一轮全球第 7；获 2023 空军“无人争锋”挑战赛优胜奖
-
-## 技术能力
+## 技术栈
 
 | 方向 | 方法与工具 |
 | --- | --- |
-| 大模型 Agent | Planner-Executor、混合 RAG、SFT、Function Calling、知识图谱 |
-| 强化学习 | 多智能体强化学习、模仿学习、博弈决策、Ray、RLlib |
-| 仿真与工程 | Python、ZeroMQ、Isaac Sim、分布式采样、GPU 集群 |
-| 应用与部署 | Dify、Xinference、Ollama、大模型本地化部署 |
+| LLM 后训练 | RLVR / GRPO / GSPO、SFT / DPO、Reward Engineering、PRM / PVM、Best-of-N |
+| Agent 系统 | Planner-Executor、混合 RAG、Function Calling、MCP / A2A、Context Engineering、SWE-bench |
+| 强化学习 | PPO / SAC / GAIL、多智能体 RL、Ray / RLlib、AReaL、TRL、LoRA |
+| 推理与部署 | vLLM、Ollama、Xinference、Dify、GPU 集群、Isaac Sim / Isaac Lab、Harfang DogFight |
 
-## 核心经历
+## 代表项目
 
-### 北京风起时域科技有限公司 · 合伙人 / AI 负责人
+### 智能运维 Agent 生产闭环 · 2025 - 至今
 
-**智能导购 Agent**
+**北京风起时域科技有限公司 · 合伙人 / AI Team Lead / 项目 Owner**
 
-- 负责公司 AI 技术路线、系统架构、模型训练与项目交付
-- 设计 Planner-Executor 主链路，融合混合 RAG、商品知识图谱、Function Calling 与用户反馈闭环
-- 搭建 SFT 数据生成和质量门禁流程，完成大模型本地化部署
+- 主导 Planner-Executor 主链路，落地混合 RAG、Function Calling 工具层与失败 case 自动回流，形成“采集、训练、评测、部署、反馈”的数据飞轮。
+- 基于 TRL GRPOTrainer + vLLM 对 Qwen3-8B LoRA 做 RLVR/GRPO 后训练；完成字段级奖励、中英等价判定与奖励误伤修复，并把训练样本从 9215 条治理到 2310 条高价值数据。
+- 线上效果：工单闭环率 +12.4%，首修成功率 +8.7%，自助诊断闭环率 +18.5%；工具幻觉率 6.8%→2.9%，TTFT P50 860ms→810ms；项目获清华力合投资，估值约 4000 万元。
+- 将易变知识外置到结构化检索底座，用五道数据门禁、DAPO 动态采样和 SFT→GRPO 课程组织训练，迭代周期从 1-2 天压缩到半天以内。
 
-### 航天科工集团智能研究院 · 实习生
+### 长链路 Coding Agent 的过程价值建模 · 2026 - 至今
 
-**基于 Isaac Sim 的多智能体强化学习 · 2024.04 - 2024.10**
+**Prefix Value Model · 第一作者 · TNNLS Under Review**
 
-- 搭建无人机、四足机器人集群等多智能体并行仿真环境
-- 完成 GPU 集群部署及环境、算法和训练脚本适配
-- 形成可复用的大规模强化学习训练与评测流程
+- 以终局成败为唯一监督，在可观测过程状态上学习成功概率，统一支持 Best-of-N 选择、推理时早停和结局可预测性分析。
+- 在 SWE-bench-Lite 上取得选择性能 0.926±0.049，逼近 verifier oracle 0.931，高于多数投票 0.826 与轨迹级 PRM 0.901，且零额外测试执行开销。
+- 基于 PVM 阈值提前放弃低成功率 rollout，节省约 15% 端到端推理算力，精度近零损失；第 3 轮即可较可靠预判终局成败，AUC 0.73→0.95。
+- 构建 vLLM 轨迹采集与多型号张量并行推理系统，在双卡 48GB 环境完成 72B 可控评测；LoRA 拒绝采样微调将单次修复成功率从 0.375 提升到 0.800。
 
-### 科技部科技创新 2030 重大项目
+### 多模态大模型强化学习 · 2024 - 2026
 
-**高智能强动态环境博弈决策子课题 · 2020.03 - 2022.03**
+**ICML 2026 · 第二作者**
 
-- 基于 Harfang3D Dogfight 开发人类专家经验采集工具
-- 构建多机空战仿真场景，支撑算法训练、基线评测与实验复现
+- 提出几何多样性优化目标，将表征空间散度纳入长文本图像描述训练，缓解输出趋同和细节覆盖不足。
+- 参与设计覆盖细节、多样性与事实一致性的多维评测协议，完成多基准实验与消融分析；方法可迁移至多模态大模型 RL 后训练（GRPO / RLVR）。
 
-### 中国科学院自动化研究所 · 赵冬斌团队
+### 人类经验引导的无人机空战决策 · 2024.01 - 2025.03
 
-**星际争霸 AI 微操作与 RoboMaster 导航 · 2020.03 - 2022.03**
+**航天科工集团智能研究院 · 算法实习生 · IEEE SMC Magazine 第一作者已录用**
 
-- 基于 Python multiprocessing 和 ZeroMQ 搭建强化学习并行采样系统
-- 实现 RoboMaster 装甲机器人无碰撞全图遍历；方案被后续团队复用，助力获得 3 个赛道全国一等奖
+- 从 0 到 1 搭建 Harfang 3D + Dogfight2 人机混合空战平台，完成气动/碰撞解算、OpenAI Gym 封装、PyQt5 实验平台与 PPO/SAC 训练监控，覆盖 1v1 至 25v25 想定。
+- 采集 2.7 小时、约 10 万时间步专家演示数据，用 GAIL 解决冷启动、PPO 做真实奖励微调，击杀率较 SOTA 提升 2.3 倍，交战耗时缩短 30%。
+- 搭建 Isaac Lab 攻防想定、向量化并行环境与 Blender→USD 资产管线，完成 ACMI 2.2 遥测桥接与 Tacview 回放。
 
-## 科研与荣誉
+### 多智能体强化学习训练基础设施 · 2020.03 - 2022.03
 
-- **ICML 2026，第二作者**：*Escaping the Likelihood Trap: Geometric Diversity Optimization for Long-Form Image Captioning*
-- 在 **IEEE Transactions on Cognitive and Developmental Systems**、**Aerospace Science and Technology**、**Guidance, Navigation and Control** 及 **ICICIP** 等期刊和会议发表多篇论文
-- **NeurIPS 2020 AIcrowd Procgen 强化学习挑战赛**：热身赛全球第 10、第一轮第 7、第二轮 16 强
-- **2023 空军“无人争锋”挑战赛 2V2 赛道**：优胜奖
+**中国科学院自动化研究所 · 赵冬斌团队 · 算法实习生**
+
+- 基于 Q-π 无关状态抽象设计 QIARL 表征学习算法，在 Procgen 多环境、多设定下完成 PyTorch / TensorFlow 双框架验证。
+- 自研 learner-actor 并行采样架构并迁移到 Ray / RLlib，并行采样吞吐较单机提升一个数量级。
+- 复现并适配 SMAC、pymarl/pymarl2、RLlib×SC2 与 MADDPG×MPE 等训练评测底座。
+
+## 论文
+
+- **[一作·已录用]** IEEE Systems, Man, and Cybernetics Magazine, 2026：*Human-Guided Autonomous Learning for UAV Air Combat Decision Optimization*
+- **[一作·Under Review]** TNNLS：*Outcome-Supervised Prefix Value Models for Best-of-N Selection and Early Abandonment in Long-Horizon Coding Agents*
+- **[二作]** ICML 2026：*Escaping the Likelihood Trap: Geometric Diversity Optimization for Long-Form Image Captioning*
+- **[一作]** ICICIP 2021：*Learning Representation with Q-irrelevance Abstraction for Reinforcement Learning*
+- **[合著]** IEEE Transactions on Cognitive and Developmental Systems, 2023：SCQRL；另在 Aerospace Science and Technology、Guidance, Navigation and Control 等期刊发表论文
+
+## 竞赛与荣誉
+
+- **NeurIPS 2020 AIcrowd Procgen 强化学习挑战赛**：负责算法研发、Ray/RLlib 训练框架改造、数据增强与 12 个环境超参搜索；第一轮 7/82，高校第一。
+- **2023 空军“无人争锋”挑战赛 2V2 仿真赛**：优胜奖，非军事高校第一。
 
 ## 教育背景
 
-- **自动化博士研究生**，北京航空航天大学，2022 - 至今
-- **软件工程硕士**，北京航空航天大学，2019 - 2021  
-  北航优秀研究生 · 北京市优秀毕业生
-- **测控技术与仪器学士**，北京理工大学，2014 - 2018  
-  光电学院优秀毕业论文 · 校级科技竞赛一等奖、二等奖
+- **北京航空航天大学**，自动化科学与电气工程学院，博士研究生，2022.09 - 至今
+- **北京航空航天大学**，软件学院，硕士，2019.09 - 2021.12  
+  北京市优秀毕业生 · 北航优秀研究生
+- **北京理工大学**，光电学院，本科，2014.09 - 2018.06  
+  优秀毕业论文 · 校级科技竞赛一等奖三项（第一作者）
 
 <div align="center">
-  <sub>欢迎就大模型 Agent、强化学习与具身智能方向开展科研或工程合作。</sub>
+  <sub>关注大模型 Agent、RL 后训练、多智能体强化学习与生产级推理系统。</sub>
 </div>

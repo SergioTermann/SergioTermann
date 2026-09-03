@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>郝帅 - 简历</title>
+<style>
+  @page { size: A4; margin: 0; }
+  @font-face { font-family:"HS Noto SC"; src:url("HS-Regular.ttf"); font-weight:400; }
+  @font-face { font-family:"HS Noto SC"; src:url("HS-Bold.ttf"); font-weight:700; }
+  html, body { margin: 0; padding: 0; background: #ffffff; }
+  .page {
+    width: 210mm; box-sizing: border-box;
+    padding: 0 12mm 4mm 12mm;
+    font-family: "HS Noto SC", "PingFang SC", sans-serif;
+    color: #1a1a1a; font-size: 8.8pt; line-height: 1.36;
+  }
+  /* ===== 头部 ===== */
+  .header { border-bottom: 2.2pt solid #1a1a1a; padding-bottom: 2.6mm; }
+  .name { font-size: 19pt; font-weight: 700; letter-spacing: 2pt; }
+  .header-grid { display:grid; grid-template-columns:41mm 1fr 23mm; align-items:center; column-gap:4mm; }
+  .univ-logo { width:36mm; height:auto; display:block; }
+  .identity { text-align:center; }
+  .identity .name { margin-bottom: 1.5mm; }
+  .github-link { color: #0f4c81; font-weight: 700; text-decoration: none; white-space: nowrap; }
+  .click-hint { margin-left: 1.5mm; color: #c2410c; font-weight: 700; white-space: nowrap; }
+  .header-objective { margin-top: 1.2mm; color: #444; font-size: 8.2pt; line-height: 1.35; text-align: center; }
+  .header-objective b { color: #0f4c81; }
+  .profile-photo { width:21mm; height:28mm; object-fit:cover; display:block; margin-left:auto; border:0.6pt solid #d7e1eb; border-radius:1mm; }
+  .contact { display:block; margin-top:1mm; font-size:7.5pt; color:#444; white-space:nowrap; }
+  .contact .sep { color: #bbb; margin: 0 0.8mm; }
+  /* ===== 区块 ===== */
+  .section { margin-top: 1.9mm; }
+  
+  .section-title { break-after: avoid; font-size: 11.5pt; font-weight: 700; color: #0f4c81;
+    border-bottom: 0.8pt solid #0f4c81; padding-bottom: 0.6mm; margin-bottom: 1.6mm;
+    letter-spacing: 1pt;
+  }
+  .section-summary { margin: 0 0 1.5mm; font-size: 9.2pt; text-align: justify; }
+  /* ===== 求职目标 ===== */
+  .objective { font-size: 9.5pt; text-align: justify; }
+  .objective b { color: #0f4c81; }
+  /* ===== 教育 ===== */
+  .edu-row { display: flex; justify-content: space-between; margin-bottom: 1.2mm; }
+  .edu-school { font-weight: 700; font-size: 10.2pt; }
+  .edu-school span { font-weight: 400; color: #444; }
+  .edu-note { font-size: 8.8pt; color: #555; white-space: nowrap; }
+  /* ===== 经历条目 ===== */
+  .entry { margin-bottom: 2.2mm; }
+  .entry.breakable { break-inside: auto; page-break-inside: auto; }
+  .entry li { break-inside: avoid; page-break-inside: avoid; }
+  .entry:last-child { margin-bottom: 0; }
+  .entry-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    background: #f2f5f9; padding: 1.2mm 2.5mm; border-radius: 1mm;
+  }
+  .entry-org { font-size: 10.5pt; font-weight: 700; }
+  .entry-org .role { font-weight: 400; color: #0f4c81; }
+  .entry-date { font-size: 8.8pt; color: #666; white-space: nowrap; }
+  .entry-sub { font-size: 9.5pt; font-weight: 700; margin-top: 1mm;
+               padding-left: 2.5mm; border-left: 2pt solid #6f9ec9; }
+  .entry-sub .tag { font-weight: 400; color: #555; }
+  .block-label { font-weight: 700; color: #0f4c81; }
+  .entry p { margin: 0.4mm 0; text-align: justify; }
+  .entry ul { margin: 0.8mm 0 0 0; padding-left: 5mm; }
+  .entry li { margin-bottom: 0.3mm; text-align: justify; }
+  .metric { font-weight: 700; background: #eaf2fa; padding: 0 1pt; border-radius: 1pt; }
+  .bg-line { color: #444; padding-left: 2.5mm; border-left: 2pt solid #dbe5f0; }
+  /* ===== 论文 ===== */
+  .paper { margin-bottom: 1.4mm; text-align: justify; }
+  .paper a { color: #0f4c81; text-decoration: none; }
+  .venue { font-weight: 700; color: #0f4c81; }
+  /* ===== 技能 ===== */
+  .skill-row { display: flex; margin-bottom: 0.8mm; align-items: center; }
+  .skill-cat { flex: 0 0 40mm; }
+  .skill-cat span { display: block; width: 30mm; margin: 0 auto;
+               font-weight: 700; color: #0f4c81; font-size: 9pt; white-space: nowrap; text-align: center;
+               background: #eaf2fa; border: 0.5pt solid #bcd2ea; border-left: 2.2pt solid #0f4c81;
+               padding: 0.6mm 3mm; border-radius: 1mm; }
+  .skill-val { flex: 1; padding-left: 2mm; text-align: justify; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ============ 头部 ============ -->
+  <div class="header">
+      <div class="header-grid">
+      <div><img class="univ-logo" src="buaa_name_blue.png" alt="北京航空航天大学"></div>
+      <div class="identity">
+        <div class="name">郝 帅</div>
+        <a class="github-link" href="https://github.com/SergioTermann">个人主页：github.com/SergioTermann<span class="click-hint">👈 点击</span></a>
+        <span class="contact">130-1101-0011 <span class="sep">｜</span> shuaihao@buaa.edu.cn <span class="sep">｜</span> 北京市海淀区 <span class="sep">｜</span> 可实习：一周 5 天 · 6 个月</span>
+      </div>
+      <div><img class="profile-photo" src="profile.jpg" alt="郝帅寸照"></div>
+    </div>
+    <div class="header-objective"><b>求职目标：</b>大模型 Agent 后训练算法工程师 目标城市：北京，可实习 6 个月（一周 5 天）</div>
+  </div>
+
+  <!-- ============ 教育背景 ============ -->
+  <div class="section">
+    <div class="section-title">教育背景</div>
+    <div class="edu-row">
+      <div class="edu-school">北京航空航天大学 <span>｜ 自动化科学与电气工程学院 · 博士在读</span></div>
+      <div class="edu-note">2022.09 – 至今</div>
+    </div>
+    <div class="edu-row">
+      <div class="edu-school">北京航空航天大学 <span>｜ 软件学院 · 硕士 · 北京市优秀毕业生、北航优秀研究生</span></div>
+      <div class="edu-note">2019.09 – 2021.12</div>
+    </div>
+    <div class="edu-row" style="margin-bottom:0.4mm;">
+      <div class="edu-school">北京理工大学 <span>｜ 光电学院 · 本科（优秀毕业论文） · 校级科技竞赛一等奖三项（第一作者）</span></div>
+      <div class="edu-note">2014.09 – 2018.06</div>
+    </div>
+  </div>
+
+  <!-- ============ 工作与项目经历 ============ -->
+  <div class="section">
+    <div class="section-title">工作与项目经历</div>
+    <p class="section-summary"><b>方向概述：</b>聚焦大模型 Agent 后训练、Agent 评测与多智能体 RL，具备算法研发、训练基础设施与生产落地经验；主导创业公司 AI 技术方向，ICML 2026 第二作者，IEEE Systems, Man, and Cybernetics Magazine 一作已录用。</p>
+
+    <!-- ICML 大模型工作置顶 -->
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-org">大模型相关工作 <span class="role">｜ ICML 2026（第二作者）</span></div>
+        <div class="entry-date">2024 – 2026</div>
+      </div>
+      <div class="entry-sub">Escaping the Likelihood Trap: Geometric Diversity Optimization for Long-Form Image Captioning <span class="tag">｜ 多模态大模型强化学习</span></div>
+      <p class="bg-line"><span class="block-label">背景：</span>长文本图像描述易出现输出趋同、细节覆盖不足，现有 RL reward 难以刻画多维质量。</p>
+      <p><span class="block-label">我的职责：</span>参与方法设计、实验与多维评测协议设计。</p>
+      <ul>
+        <li>提出几何多样性优化目标，将表征空间散度纳入训练，提升长描述的细节丰富度与信息覆盖。</li>
+        <li>设计覆盖细节、多样性与事实一致性的评测协议，完成多基准实验与消融分析。</li>
+      </ul>
+      <p><span class="block-label">成果：</span><span class="metric">ICML 2026 接收（第二作者）</span>，方法可迁移至多模态大模型 RL 后训练（GRPO / RLVR）。</p>
+    </div>
+
+    <!-- TNNLS 大模型工作置顶 -->
+    <div class="entry breakable">
+      <div class="entry-head">
+        <div class="entry-org">大模型相关工作 <span class="role">｜ TNNLS · Under Review · 独立完成</span></div>
+        <div class="entry-date">2026 – 至今</div>
+      </div>
+      <div class="entry-sub">Outcome-Supervised Prefix Value Models for Best-of-N Selection and Early Abandonment in Long-Horizon Coding Agents <span class="tag">｜ 仓库级 Coding Agent · 过程奖励模型 · Agent 轨迹治理与评测闭环</span></div>
+      <p class="bg-line"><span class="block-label">项目简介：</span>针对大语言模型代码智能体在仓库级长链路任务中“验证开销随链路爆炸、自一致性选择随链路退化”的瓶颈，提出前缀价值模型（Prefix Value Model, PVM）：仅以终局成败为监督，在可观测过程状态上学习成功概率，统一支持 Best-of-N 选择、推理时早停与结局可预测性分析。</p>
+      <p><span class="block-label">我的职责：</span>独立完成算法设计、数据构造、实验系统、工程实现与论文撰写，从 0 到 1 搭建可复现闭环。</p>
+      <ul>
+        <li><b>PVM 方法与五臂对照</b>：以 MC 回报 + 进度 shaping 训练前缀价值模型；设计信息预算对齐实验（20 个独立闭环 × 5 随机种子 × 4 档链路长度），<span class="metric">选择性能 0.926±0.049，逼近 verifier oracle 0.931</span>，显著优于多数投票 0.826 与轨迹级 PRM 0.901，零额外测试执行开销。</li>
+        <li><b>早停与可预测性</b>：基于 PVM 阈值提前放弃 doomed rollout，<span class="metric">节省约 15% 端到端推理算力、精度近零损失</span>；提出代码智能体首个结局可预测性曲线，第 3 轮即可预判终局成败（AUC 0.73→0.95）。</li>
+        <li><b>能力带与跨模型验证</b>：在 SWE-bench-Lite 上以 Qwen2.5-Coder 7B→72B 刻画学习型选择可行性的能力带边界，gold patch 复现 <span class="metric">22/24</span>，并跨模型家族复现主要结论。</li>
+        <li><b>工程系统</b>：基于 vLLM 完成大规模轨迹采集与多型号张量并行推理，在双卡 48GB 环境实现 72B 可控评测；构建全流程可复现实验系统并开源全部工件。</li>
+        <li><b>后训练与归因</b>：LoRA 拒绝采样微调将单次修复成功率 0.375→0.800；对照实验确认选择价值主要来自推理时，全部结论经配对统计检验。</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-org">北京风起时域科技有限公司 <span class="role">｜ 合伙人 / AI Team Leader </span></div>
+        <div class="entry-date">2025 – 至今</div>
+      </div>
+      <div class="entry-sub">智能运维 Agent ｜ Agentic RL 后训练与生产闭环 <span class="tag">｜ 项目 owner</span></div>
+      <p class="bg-line"><span class="block-label">背景：</span>企业运维排障依赖专家经验，多步 Agent 的工具幻觉与不稳定制约落地。目标：统筹架构、数据、训练与部署，打通 Agent 生产闭环。</p>
+      <p><span class="block-label">指标与效果：</span><span class="metric">工单闭环率 +12.4%，首修成功率 +8.7%，自助诊断闭环率 +18.5%；工具幻觉率 6.8%→2.9%，TTFT P50 860ms→810ms</span>；项目获清华力合投资，估值约 4000 万元。</p>
+      <p><span class="block-label">我的职责：</span>作为 AI 技术负责人，从 0 到 1 统筹架构、数据、训练与部署并负责交付。</p>
+      <ul>
+        <li><b>Agent 架构模块</b>：主导 Planner–Executor 链路，落地混合 RAG、Function Calling 工具层与反馈闭环；失败 case 自动回流，形成数据飞轮。</li>
+        <li><b>后训练模块（RLVR / GRPO）</b>：基于 TRL GRPOTrainer + vLLM 对 Qwen3-8B（LoRA）进行训练；对齐 expects/rejects，实现字段级打分与中英等价判定，修复奖励误伤；逐样本归因叠加难度过滤（9215→2310），<span class="metric">槽位提取 0.914→0.961（+4.7pt）、跨品牌混淆命中 6→2 条、拒答反劫持稳定满分</span>，单轮训练 11h。</li>
+        <li><b>训练体系架构升级</b>：提出知识-技能分层，将易变知识外置到结构化检索底座，权重聚焦消歧、槽位提取与拒答；设计五道数据门禁 + DAPO 动态采样 + SFT→GRPO 课程，<span class="metric">迭代周期从 1–2 天压缩到半天以内</span>。</li>
+        <li><b>推理与部署模块</b>：基于 vLLM + GPU 集群完成本地化部署与推理优化，保障生产 SLA。</li>
+        <li><b>团队统筹</b>：制定技术路线与里程碑，拆解任务、把控评审与上线质量，并向投资人汇报。</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-org">航天科工集团智能研究院 <span class="role">｜ 算法实习生</span></div>
+        <div class="entry-date">2024.01 – 2025.03</div>
+      </div>
+      <div class="entry-sub">空战攻防仿真平台与多智能体 RL 训练基础设施 <span class="tag">｜ Harfang DogFight + Isaac Sim/Lab · 独立负责仿真与训练环境</span></div>
+      <p class="bg-line"><span class="block-label">背景：</span>实机验证成本高、周期长且危险场景难复现。目标：从 0 到 1 构建可并行、可复用的多智能体 RL 仿真训练与评测基础设施，覆盖 Harfang DogFight 与 Isaac Sim/Lab。</p>
+      <p><span class="block-label">我的职责：</span>独立完成空战平台、专家数据采集、模仿学习训练、Isaac Lab 攻防仿真与遥测回放全链路。</p>
+      <ul>
+        <li><b>空战仿真平台架构（从 0 到 1）</b>：基于 Harfang 3D + Dogfight2 Sandbox 搭建人机混合空战平台，完成气动/碰撞解算、RL 决策、OpenAI Gym 封装与 socket 通信；开发 PyQt5 实验平台，支持 PPO/SAC 训练、迁移与 TensorBoard 监控，覆盖 1v1 至 25v25 想定。</li>
+        <li><b>人类经验引导的 GAIL + PPO</b>：设计专家数据采集与 26 维状态→5 维动作映射，采集 <span class="metric">2.7 小时（约 10 万时间步）</span>演示数据；GAIL 解决冷启动、PPO 完成真实奖励微调，<span class="metric">击杀率较 SOTA 提升 2.3 倍、交战耗时缩短 30%</span>；成果以<b>第一作者</b>发表于 <b>IEEE Systems, Man, and Cybernetics Magazine（2026，已录用）</b>。</li>
+        <li><b>技能分层强化学习</b>：设计“执行器 + 评价器”多层架构，融合人类标签与自主交互学习，支持从基础机动到复杂战术迁移。</li>
+        <li><b>Isaac Lab 攻防想定</b>：搭建来袭目标—拦截弹—保护资产三方想定，完成目标分配、追踪制导、齐射节流、杀伤概率与接触力命中判定。</li>
+        <li><b>向量化框架与部署</b>：将单环境迁移为 manager-based 环境，完成 ActionTerm、观测/随机化事件、数十实例并行 rollout，以及 Isaac Lab / OmniDrones GPU 集群部署。</li>
+        <li><b>资产与威胁建模</b>：打通 Blender → USD 管线，完成舰艇模块化导入、物理材质/地形/传感器配置，并设计导弹混装挂载与 SAM 威胁模型。</li>
+        <li><b>遥测与流水线</b>：实现 ACMI 2.2 实时遥测桥接与 Tacview 回放，沉淀“采集 → 训练 → 回放评测 → 基线对比”标准流程。</li>
+      </ul>
+    </div>
+
+    <div class="entry breakable">
+      <div class="entry-head">
+        <div class="entry-org">中国科学院自动化研究所 <span class="role">｜ 赵冬斌（IEEE Fellow）团队 · 算法实习生</span></div>
+        <div class="entry-date">2020.03 – 2022.03</div>
+      </div>
+      <div class="entry-sub">多智能体强化学习 ｜ RL 表征学习与泛化（QIARL·论文工作） ｜ 分布式训练基础设施 <span class="tag">｜ 含科技部科技创新 2030 重大项目子课题</span></div>
+      <p class="bg-line"><span class="block-label">背景：</span>SMAC、Procgen 等重仿真环境存在单机采样瓶颈，像素 RL 表征易引入任务无关信息。目标：搭建高吞吐训练基础设施并提出状态抽象算法。</p>
+      <p><span class="block-label">我的职责：</span>研究算法、训练基础设施与竞赛支撑三线推进，独立完成方案设计、工程实现与实验验证。</p>
+      <ul>
+        <li><b>QIARL 表征学习算法</b>：基于 Q-π 无关状态抽象理论设计 QIARL，以 encoder + 多头 PPO 特征与独立 Q 网络构造相似 Q 值状态聚合，抑制背景噪声并提升泛化。</li>
+        <li><b>工程实现与实验验证</b>：复现 DBC / CURL / DeepMDP，适配 Procgen 并完成 PyTorch / TensorFlow 双框架验证；在多环境、多设定下与 PPO / Rainbow 对比，<span class="metric">200 关设定泛化性与性能显著优于 PPO</span>。</li>
+        <li><b>论文成果（一作）</b>：QIARL 以第一作者发表于 <b>ICICIP 2021（EI）</b>；扩展方法 SCQRL 发表于 <b>IEEE TCDS（2023，SCI）</b>。</li>
+        <li><b>多智能体 RL</b>：基于 pymarl / pymarl2 搭建 SMAC 训练与留存流程，复现 QPLEX / RODE / SMIX 等算法，跑通 RLlib×SC2 与 MADDPG×MPE 测试底座。</li>
+        <li><b>分布式训练基础设施</b>：基于 ZeroMQ、多进程与共享内存自研 learner–actor 架构并迁移至 Ray / RLlib，<span class="metric">并行采样吞吐较单机提升一个数量级</span>。</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- ============ 竞赛荣誉 ============ -->
+  <div class="section">
+    <div class="section-title">竞赛荣誉</div>
+    <ul style="margin:0;padding-left:5mm;">
+      <li><b>NeurIPS AIcrowd Procgen 强化学习挑战赛</b>：负责核心算法研发——Ray / RLlib 训练框架改造（trainer 迭代逻辑、target 网络更新、replay buffer）、RAD 数据增强与 crop+差帧 wrapper、12 个 Procgen 环境超参搜索（4×V100）；<span class="metric">7/82，高校第一</span></li>
+      <li><b>空军"无人争锋"挑战赛仿真赛</b>：2V2 对抗优胜奖（2023），<span class="metric">非军事高校第一</span></li>
+    </ul>
+  </div>
+
+  <!-- ============ 其他学术成果 ============ -->
+  <div class="section">
+    <div class="section-title">其他学术成果</div>
+    <div class="paper"><span class="venue">[期刊一作·已录用]</span> IEEE Systems, Man, and Cybernetics Magazine（2026）：Human-Guided Autonomous Learning for UAV Air Combat Decision Optimization</div>
+    <div class="paper"><span class="venue">[会议一作]</span> ICICIP 2021：Learning Representation with Q-irrelevance Abstraction for Reinforcement Learning（QIARL）</div>
+    <div class="paper"><span class="venue">[SCI Q1 合著]</span> IEEE Transactions on Cognitive and Developmental Systems（2023，SCQRL）；Aerospace Science and Technology、Guidance, Navigation and Control（ESCI）等多篇</div>
+  </div>
+
+  <!-- ============ 专业技能 ============ -->
+  <div class="section">
+    <div class="section-title">专业技能</div>
+    <div class="skill-row"><div class="skill-cat"><span>Agentic RL / 后训练</span></div><div class="skill-val">GRPO / GSPO、RLVR、Reward 设计与治理、过程奖励模型（PRM / PVM）、SFT / DPO、PPO、Best-of-N 推理时扩展</div></div>
+    <div class="skill-row"><div class="skill-cat"><span>Agent 工程</span></div><div class="skill-val">Planner–Executor、RAG、Function Calling、MCP / A2A、Agent Harness、Context Engineering、Coding Agent 与 SWE-bench 评测</div></div>
+    <div class="skill-row"><div class="skill-cat"><span>训练与评测</span></div><div class="skill-val">PPO / SAC / GAIL 模仿学习、Ray / RLlib、AReaL、TRL、LoRA、LLM-as-Judge、轨迹回放与质量筛选</div></div>
+    <div class="skill-row" style="margin-bottom:0;"><div class="skill-cat"><span>推理与部署</span></div><div class="skill-val">vLLM、Ollama、Xinference、Dify、GPU 集群、本地化部署、Isaac Sim / Isaac Lab、Harfang 3D DogFight</div></div>
+  </div>
+
+</div>
+</body>
+</html>
