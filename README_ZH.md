@@ -6,6 +6,7 @@
   <p>
     <a href="mailto:shuaihao@buaa.edu.cn">邮箱</a> ·
     中国北京 ·
+    <a href="https://sergiotermann.github.io/SergioTermann/">个人主页</a> ·
     <a href="https://github.com/SergioTermann">GitHub</a> ·
     <a href="./README.md">English</a> ·
     <a href="./README_DE.md">Deutsch</a>
@@ -17,6 +18,15 @@
 面向大模型 Agent 与强化学习后训练的算法工程师，习惯按“问题定义、数据构造、模型训练、离线评测、在线推理、指标回流”的闭环推进。当前以 AI Team Lead 身份负责生产级 Agent 系统，同时在北京航空航天大学攻读博士学位。
 
 主线能力集中在：Agentic RL 后训练、过程奖励模型与轨迹治理、多智能体强化学习、大规模训练与评测基础设施，以及 vLLM/GPU 集群上的本地化部署。
+
+## 关键结果
+
+| 指标 | 结果 |
+| --- | --- |
+| 生产 Agent 工单闭环率 | +12.4% |
+| Coding Agent Best-of-N 选择性能 | 0.926，逼近 verifier oracle 0.931 |
+| 推理时早停算力节省 | 约 15%，精度近零损失 |
+| 空战强化学习击杀率 | 较 SOTA 提升 2.3× |
 
 ## 技术栈
 

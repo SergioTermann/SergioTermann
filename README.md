@@ -6,6 +6,7 @@
   <p>
     <a href="mailto:shuaihao@buaa.edu.cn">Email</a> ·
     Beijing, China ·
+    <a href="https://sergiotermann.github.io/SergioTermann/">Homepage</a> ·
     <a href="https://github.com/SergioTermann">GitHub</a> ·
     <a href="./README_ZH.md">中文</a> ·
     <a href="./README_DE.md">Deutsch</a>
@@ -17,6 +18,15 @@
 Algorithm engineer focused on LLM agents and reinforcement-learning post-training. I work in closed loops: problem definition, data construction, model training, offline evaluation, online inference, and metric-driven iteration. I currently lead AI development at a startup while pursuing a PhD at Beihang University.
 
 Core strengths: agentic RL post-training, process reward models and trajectory governance, multi-agent reinforcement learning, large-scale training and evaluation infrastructure, and local deployment on vLLM/GPU clusters.
+
+## Key Results
+
+| Metric | Result |
+| --- | --- |
+| Production agent ticket-closure rate | +12.4% |
+| Coding-agent Best-of-N selection | 0.926, approaching verifier oracle 0.931 |
+| Inference-time early abandonment compute savings | ~15% with near-zero accuracy loss |
+| Air-combat reinforcement-learning kill rate | 2.3× over SOTA |
 
 ## Technical Stack
 
