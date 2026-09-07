@@ -1,23 +1,21 @@
 <div align="center">
   <img src="./images/profile.jpg" alt="Profile photo" width="168" />
-  <h1>Sergio Termann (Shuai Hao)</h1>
-  <p><strong>Algorithm Engineer · LLM Agents / Post-training / Multi-Agent Reinforcement Learning</strong></p>
+  <h1>Shuai Hao | Sergio Termann</h1>
+  <p><strong>Algorithm Engineer | LLM Agents / Multimodal Post-training / Multi-Agent Reinforcement Learning</strong></p>
   <p>PhD Candidate, Beihang University · AI Team Lead</p>
   <p>
     <a href="mailto:shuaihao@buaa.edu.cn">Email</a> ·
     Beijing, China ·
     <a href="https://sergiotermann.github.io/SergioTermann/">Homepage</a> ·
-    <a href="https://github.com/SergioTermann">GitHub</a> ·
-    <a href="./README_ZH.md">中文</a> ·
-    <a href="./README_DE.md">Deutsch</a>
+    <a href="https://github.com/SergioTermann?tab=repositories">Repositories</a>
   </p>
 </div>
 
-## Core Positioning
+## About
 
-Algorithm engineer focused on LLM agents and reinforcement-learning post-training. I work in closed loops: problem definition, data construction, model training, offline evaluation, online inference, and metric-driven iteration. I currently lead AI development at a startup while pursuing a PhD at Beihang University.
+I build and evaluate learning agents, from reward design and model post-training to production inference. My work connects multimodal reinforcement learning, coding-agent value models, and deployed operations agents with reproducible training systems. I lead AI development at a startup while pursuing a PhD at Beihang University.
 
-Core strengths: agentic RL post-training, process reward models and trajectory governance, multi-agent reinforcement learning, large-scale training and evaluation infrastructure, and local deployment on vLLM/GPU clusters.
+**Seeking an LLM agent post-training algorithm internship in Beijing. Available five days per week for six months.**
 
 ## Key Results
 
@@ -26,13 +24,14 @@ Core strengths: agentic RL post-training, process reward models and trajectory g
 | Production agent ticket-closure rate | +12.4% |
 | Coding-agent Best-of-N selection | 0.926, approaching verifier oracle 0.931 |
 | Inference-time early abandonment compute savings | ~15% with near-zero accuracy loss |
+| Geo-RL Semantic Volume Score vs. LLaVA-1.5 7B MLE | 2.20 to 3.55 (+61%) |
 | Air-combat reinforcement-learning kill rate | 2.3× over SOTA |
 
 ## Technical Stack
 
 | Area | Methods & Tools |
 | --- | --- |
-| LLM post-training | RLVR / GRPO / GSPO, SFT / DPO, reward engineering, PRM / PVM, Best-of-N |
+| LLM & VLM post-training | RLVR / GRPO / GSPO, PPO, SFT / DPO, reward engineering, PRM / PVM, Best-of-N, set-level RL |
 | Agent systems | Planner-Executor, hybrid RAG, function calling, MCP / A2A, context engineering, SWE-bench |
 | Reinforcement learning | PPO / SAC / GAIL, multi-agent RL, Ray / RLlib, AReaL, TRL, LoRA |
 | Inference & deployment | vLLM, Ollama, Xinference, Dify, GPU clusters, Isaac Sim / Isaac Lab, Harfang DogFight |
@@ -41,10 +40,11 @@ Core strengths: agentic RL post-training, process reward models and trajectory g
 
 ### Production Agent for Intelligent Operations · 2025 - Present
 
-**Beijing Fengqi Shiyu Technology Co., Ltd. · Co-founder / AI Team Lead / Project Owner**
+**Beijing Fengqi Shiyu Technology Co., Ltd. · Partner / AI Team Lead / Project Owner**
 
 - Led a Planner-Executor architecture with hybrid RAG, function-calling tooling, and automatic failure-case recycling to build a data flywheel across collection, training, evaluation, deployment, and feedback.
 - Trained a Qwen3-8B LoRA model with TRL GRPOTrainer + vLLM using RLVR/GRPO; built field-level reward scoring, Chinese-English equivalence checks, and reduced 9,215 training samples to 2,310 high-value examples.
+- Improved slot extraction from 0.914 to 0.961 (+4.7 percentage points), with an 11-hour training run.
 - Online impact: ticket closure rate +12.4%, first-fix success +8.7%, self-service diagnosis closure +18.5%; tool hallucination 6.8%→2.9%, TTFT P50 860ms→810ms; supported an investment from Tsinghua Lihe at an approximately RMB 40 million valuation.
 - Decoupled volatile knowledge from model weights, introduced five data gates, DAPO dynamic sampling, and an SFT→GRPO curriculum, reducing iteration time from 1-2 days to under half a day.
 
@@ -57,12 +57,15 @@ Core strengths: agentic RL post-training, process reward models and trajectory g
 - Early abandonment of low-success rollouts saved roughly 15% end-to-end inference compute with near-zero accuracy loss; terminal outcomes became reliably predictable by round 3, with AUC improving from 0.73 to 0.95.
 - Built a vLLM trajectory-collection and tensor-parallel inference system for controllable 72B evaluation on dual 48GB GPUs; LoRA rejection-sampling fine-tuning improved single-pass repair success from 0.375 to 0.800.
 
-### Reinforcement Learning for Multimodal Models · 2024 - 2026
+### Geo-RL for Long-Form Image Captioning · 2024 - 2026
 
 **ICML 2026 · Second author**
 
-- Proposed a geometric diversity objective that incorporates representation-space dispersion into long-form image-caption training, reducing output convergence and improving detail coverage.
-- Co-designed a multidimensional evaluation protocol covering detail, diversity, and factuality; ran multi-benchmark experiments and ablations. The method transfers to multimodal LLM RL post-training with GRPO/RLVR.
+- Contributed to problem formulation, reward and credit-assignment design, implementation, set-level evaluation, and ablations for *Escaping the Likelihood Trap: Geometric Diversity Optimization for Long-Form Image Captioning*.
+- Combined a CLIP-weighted RBF-DPP log-determinant reward with pairwise repulsion, image-text alignment, hallucination penalties, and a KL trust region. PPO balances semantic diversity with visual fidelity.
+- Derived leave-one-out marginal advantages using a single Cholesky factorization to avoid repeated determinant computation.
+- On DeCapBench, relative to LLaVA-1.5 7B MLE: **Distinct-2 0.66 to 0.84 (+27%)**, **Semantic Volume Score 2.20 to 3.55 (+61%)**, Self-BLEU 0.77 to 0.53, CLIPScore 0.74 to 0.81, and CHAIRi 8.3% to 7.1%.
+- Evaluated component ablations, sampling and data scaling, and model sizes of 7B, 13B, and 34B parameters.
 
 ### Human-Guided Autonomous UAV Air Combat · Jan 2024 - Mar 2025
 

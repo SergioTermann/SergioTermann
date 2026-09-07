@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>郝帅 · Algorithm Engineer</title>
-  <meta name="description" content="郝帅的个人主页：大模型 Agent、LLM 后训练与多智能体强化学习。">
+  <title>Shuai Hao | Sergio Termann | Algorithm Engineer</title>
+  <meta name="description" content="Shuai Hao, PhD candidate at Beihang University and AI team lead. Research and engineering in LLM agents, multimodal post-training, and multi-agent reinforcement learning.">
   <style>
     :root {
       --ink: #0f172a;
@@ -30,7 +30,7 @@
       margin: 0;
       background: var(--canvas);
       color: var(--ink);
-      font-family: "SF Pro Display", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
@@ -64,7 +64,7 @@
 
     .brand {
       font-weight: 750;
-      letter-spacing: 0.02em;
+      letter-spacing: 0;
       font-size: 15px;
     }
 
@@ -82,7 +82,7 @@
     }
 
     .hero {
-      padding: 82px 0 70px;
+      padding: 48px 0;
       display: grid;
       grid-template-columns: 260px 1fr;
       gap: 52px;
@@ -113,7 +113,7 @@
       color: var(--accent);
       font-size: 13px;
       font-weight: 750;
-      letter-spacing: 0.08em;
+      letter-spacing: 0;
       text-transform: uppercase;
     }
 
@@ -126,16 +126,16 @@
 
     h1 {
       margin: 18px 0 8px;
-      font-size: clamp(42px, 6vw, 72px);
-      line-height: 0.98;
-      letter-spacing: -0.045em;
+      font-size: 56px;
+      line-height: 1.1;
+      letter-spacing: 0;
       font-weight: 800;
     }
 
     .hero-role {
       margin: 0;
       color: #242e3e;
-      font-size: clamp(18px, 2vw, 23px);
+      font-size: 21px;
       line-height: 1.45;
       font-weight: 500;
     }
@@ -184,7 +184,7 @@
       margin: 0;
       font-size: 28px;
       font-weight: 760;
-      letter-spacing: -0.025em;
+      letter-spacing: 0;
     }
 
     .section-kicker {
@@ -233,7 +233,7 @@
     .metric-value {
       font-size: 28px;
       font-weight: 780;
-      letter-spacing: -0.04em;
+      letter-spacing: 0;
       color: var(--accent);
     }
 
@@ -259,7 +259,7 @@
       color: #aeb6c2;
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.08em;
+      letter-spacing: 0;
       margin-bottom: 14px;
     }
 
@@ -308,7 +308,7 @@
       margin: 0 0 8px;
       font-size: 20px;
       font-weight: 750;
-      letter-spacing: -0.02em;
+      letter-spacing: 0;
     }
 
     .work-summary {
@@ -336,6 +336,9 @@
       background: #fff;
       font-size: 12px;
       font-weight: 600;
+      max-width: 100%;
+      padding-block: 4px;
+      line-height: 1.5;
     }
 
     .tag.accent {
@@ -434,6 +437,11 @@
       color: var(--ink);
     }
 
+    main { overflow-wrap: anywhere; }
+    section[id] { scroll-margin-top: 72px; }
+    .hero > div, .work-body { min-width: 0; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
     @media (max-width: 860px) {
       .shell {
         width: min(100% - 28px, 720px);
@@ -443,14 +451,20 @@
         display: none;
       }
 
+      .topbar { height: auto; min-height: 54px; }
+      .topbar-inner { min-height: 54px; gap: 16px; padding-block: 12px; }
+      .topbar-links { flex-wrap: wrap; justify-content: flex-end; gap: 10px 14px; }
+      h1 { font-size: 40px; }
+      .hero-role { font-size: 18px; }
+
       .hero {
         grid-template-columns: 1fr;
         gap: 28px;
-        padding: 54px 0 48px;
+        padding: 28px 0;
       }
 
       .portrait-frame {
-        width: 190px;
+        width: 120px;
       }
 
       .intro-grid,
@@ -497,7 +511,7 @@
   <header class="topbar">
     <div class="shell topbar-inner">
       <div class="brand">SH</div>
-      <nav class="topbar-links" aria-label="主导航">
+      <nav class="topbar-links" aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#work">Work</a>
         <a href="#publications">Research</a>
@@ -511,19 +525,19 @@
   <main>
     <section class="hero shell">
       <div class="portrait-frame">
-        <img src="./images/profile.jpg" alt="郝帅个人照片">
+        <img src="./images/profile.jpg" alt="Portrait of Shuai Hao" width="260" height="347">
       </div>
       <div>
         <div class="eyebrow">Algorithm Engineer</div>
-        <h1>郝帅</h1>
-        <p class="hero-role">大模型 Agent · LLM 后训练 · 多智能体强化学习</p>
+        <h1>Shuai Hao</h1>
+        <p class="hero-role">LLM Agents / Multimodal Post-training / Multi-Agent RL</p>
         <div class="hero-meta">
-          <span>北京航空航天大学博士研究生</span>
+          <span>PhD Candidate, Beihang University</span>
           <span>AI Team Lead</span>
           <a href="mailto:shuaihao@buaa.edu.cn">shuaihao@buaa.edu.cn</a>
           <a href="https://github.com/SergioTermann">github.com/SergioTermann</a>
         </div>
-        <p class="lede">我负责从问题定义、数据治理、模型后训练到在线推理与指标回流的完整链路，<strong>用可量化的业务结果驱动算法迭代</strong>。当前核心方向是 Agentic RL、过程奖励建模，以及面向生产环境的大模型训练与推理系统。</p>
+        <p class="lede">I build and evaluate learning agents, from reward design and model post-training to production inference. My work spans <strong>multimodal reinforcement learning, coding-agent value models, and deployed operations agents</strong>. I lead AI development at a startup while pursuing my PhD at Beihang University.</p>
       </div>
     </section>
 
@@ -531,30 +545,30 @@
       <div class="shell">
         <div class="section-head">
           <h2 class="section-title">Profile</h2>
-          <div class="section-kicker">01 / 04</div>
+          <div class="section-kicker">01 / 06</div>
         </div>
         <div class="intro-grid">
           <div>
-            <h3 class="intro-title">算法工程视角</h3>
-            <p class="intro-copy">不满足于单点模型效果，更关注算法能否稳定地进入生产链路：数据怎么获得监督信号，奖励如何避免误伤，策略如何在长任务中做出可靠决策，模型如何在有限算力与延迟约束下被服务。</p>
+            <h3 class="intro-title">Research into working systems</h3>
+            <p class="intro-copy">I connect algorithm design with data construction, reproducible evaluation, and deployment. My research asks how rewards can capture quality, how agents can make reliable decisions over long tasks, and how inference can use a limited compute budget effectively.</p>
           </div>
           <div>
-            <h3 class="intro-title">当前主线</h3>
-            <p class="intro-copy">围绕 Agent 的生产化闭环，推进 RLVR / GRPO 后训练、过程奖励模型、推理时扩展与 vLLM 部署。研究工作同时覆盖多模态大模型强化学习和多智能体决策。</p>
+            <h3 class="intro-title">Current focus</h3>
+            <p class="intro-copy">Agentic RL with RLVR / GRPO, outcome-supervised prefix value models, and set-level reinforcement learning for vision-language models. I am seeking an LLM agent post-training algorithm internship in Beijing, available five days per week for six months.</p>
           </div>
         </div>
         <div class="metric-strip" style="margin-top:38px;">
           <div class="metric-cell">
             <div class="metric-value">+12.4%</div>
-            <div class="metric-label">生产 Agent 工单闭环率提升</div>
+            <div class="metric-label">Improvement in production agent ticket closure</div>
           </div>
           <div class="metric-cell">
             <div class="metric-value">0.926</div>
-            <div class="metric-label">SWE-bench-Lite Best-of-N 选择性能</div>
+            <div class="metric-label">Best-of-N selection score in coding-agent experiments</div>
           </div>
           <div class="metric-cell">
-            <div class="metric-value">2.3×</div>
-            <div class="metric-label">空战强化学习击杀率相对提升</div>
+            <div class="metric-value">+61%</div>
+            <div class="metric-label">Semantic Volume Score for Geo-RL vs. LLaVA-1.5 7B MLE</div>
           </div>
         </div>
       </div>
@@ -564,7 +578,7 @@
       <div class="shell">
         <div class="section-head">
           <h2 class="section-title">Expertise</h2>
-          <div class="section-kicker">02 / 04</div>
+          <div class="section-kicker">02 / 06</div>
         </div>
         <div class="expertise-grid">
           <div class="expertise-item">
@@ -619,21 +633,21 @@
       <div class="shell">
         <div class="section-head">
           <h2 class="section-title">Selected Work</h2>
-          <div class="section-kicker">03 / 04</div>
+          <div class="section-kicker">03 / 06</div>
         </div>
         <div class="work-list">
           <article class="work-item">
             <div class="work-org">
-              <strong>北京风起时域科技</strong>
+              <strong>Beijing Fengqi Shiyu Technology</strong>
               2025 - Present<br>
               Partner / AI Team Lead
             </div>
             <div class="work-body">
-              <h3>智能运维 Agent 生产闭环</h3>
-              <p class="work-summary">从 0 到 1 主导 Planner-Executor、混合 RAG、Function Calling 与反馈闭环；基于 TRL + vLLM 对 Qwen3-8B LoRA 进行 RLVR / GRPO 后训练，并完成本地化部署。</p>
+              <h3>Production agents for intelligent operations</h3>
+              <p class="work-summary">Led architecture, data, training, and delivery for a Planner-Executor agent with hybrid RAG, function calling, and automatic failure-case feedback. Trained Qwen3-8B with LoRA and TRL GRPOTrainer, using field-level rewards and difficulty filtering to refine 9,215 samples into 2,310 training examples. Slot extraction improved from 0.914 to 0.961. Deployed with vLLM on GPU clusters and reduced iteration time from 1-2 days to under half a day.</p>
               <div class="tag-row">
-                <span class="tag signal">工单闭环率 +12.4%</span>
-                <span class="tag signal">工具幻觉率 6.8%→2.9%</span>
+                <span class="tag signal">Ticket closure +12.4%</span>
+                <span class="tag signal">Tool hallucination 6.8% to 2.9%</span>
                 <span class="tag accent">Qwen3-8B · LoRA</span>
                 <span class="tag accent">RLVR / GRPO</span>
               </div>
@@ -644,14 +658,14 @@
             <div class="work-org">
               <strong>Prefix Value Model</strong>
               2026 - Present<br>
-              First Author · TNNLS Review
+              First Author · TNNLS Under Review
             </div>
             <div class="work-body">
-              <h3>长链路 Coding Agent 过程价值建模</h3>
-              <p class="work-summary">仅用终局成败学习过程状态上的成功概率，统一支持 Best-of-N 选择、推理时早停与结局可预测性分析。在 SWE-bench-Lite 上逼近 verifier oracle，且不增加测试执行开销。</p>
+              <h3>Prefix value models for long-horizon coding agents</h3>
+              <p class="work-summary">Independently developed the algorithm, data pipeline, experiments, and manuscript. Learned success probabilities from terminal outcomes to support Best-of-N selection and early abandonment. Selection reached 0.926 +/- 0.049 against a verifier oracle of 0.931 with no extra test execution. Early abandonment saved approximately 15% of end-to-end inference compute with near-zero accuracy loss. Built reproducible vLLM trajectory collection and evaluation across Qwen2.5-Coder 7B to 72B.</p>
               <div class="tag-row">
                 <span class="tag signal">0.926 vs 0.931 oracle</span>
-                <span class="tag signal">推理算力 -15%</span>
+                <span class="tag signal">Inference compute savings ~15%</span>
                 <span class="tag accent">72B · vLLM</span>
                 <span class="tag accent">Outcome-supervised</span>
               </div>
@@ -665,10 +679,10 @@
               Second Author
             </div>
             <div class="work-body">
-              <h3>长文本图像描述的多模态 RL</h3>
-              <p class="work-summary">提出几何多样性优化目标，将表征空间散度纳入长描述训练，缓解输出趋同与细节覆盖不足；方法可迁移至多模态大模型 RL 后训练。</p>
+              <h3>Geo-RL for long-form image captioning</h3>
+              <p class="work-summary">Contributed to problem formulation, reward and credit-assignment design, implementation, evaluation, and ablations. Geo-RL uses a CLIP-weighted RBF-DPP log-determinant reward, pairwise repulsion, and PPO to balance semantic coverage with visual fidelity. Leave-one-out marginal advantages are computed from one Cholesky factorization. On DeCapBench, compared with LLaVA-1.5 7B MLE, Distinct-2 increased from 0.66 to 0.84 and SVS from 2.20 to 3.55, while CHAIRi decreased from 8.3% to 7.1%.</p>
               <div class="tag-row">
-                <span class="tag accent">GRPO / RLVR</span>
+                <span class="tag accent">Set-level RL / PPO</span>
                 <span class="tag">Geometric Diversity</span>
                 <span class="tag">Evaluation Protocol</span>
               </div>
@@ -677,32 +691,32 @@
 
           <article class="work-item">
             <div class="work-org">
-              <strong>航天科工集团智能研究院</strong>
+              <strong>CASIC Intelligent Research Institute</strong>
               2024.01 - 2025.03<br>
               Algorithm Intern
             </div>
             <div class="work-body">
-              <h3>人类经验引导的无人机空战决策</h3>
-              <p class="work-summary">独立搭建 Harfang DogFight 人机混合平台与 Isaac Lab 攻防想定，完成专家数据采集、GAIL 冷启动与 PPO 奖励微调，并沉淀采集、训练、回放评测的完整流程。</p>
+              <h3>Human-guided learning for UAV air-combat simulation</h3>
+              <p class="work-summary">Built a Harfang DogFight simulation and RL training platform, with Gym interfaces, a PyQt5 experiment UI, and PPO / SAC training. Collected 2.7 hours of expert demonstrations for GAIL initialization and PPO fine-tuning. Developed vectorized Isaac Lab environments, GPU deployment, and ACMI telemetry with Tacview replay for reproducible simulation evaluation.</p>
               <div class="tag-row">
-                <span class="tag signal">击杀率 2.3×</span>
-                <span class="tag signal">交战耗时 -30%</span>
-                <span class="tag accent">IEEE SMC Magazine 一作</span>
+                <span class="tag signal">Simulation kill rate 2.3x vs. SOTA</span>
+                <span class="tag signal">Engagement duration -30%</span>
+                <span class="tag accent">IEEE SMC Magazine / First author / Accepted</span>
               </div>
             </div>
           </article>
 
           <article class="work-item">
             <div class="work-org">
-              <strong>中国科学院自动化研究所</strong>
+              <strong>Institute of Automation, Chinese Academy of Sciences</strong>
               2020.03 - 2022.03<br>
               Algorithm Intern
             </div>
             <div class="work-body">
-              <h3>多智能体 RL 训练基础设施与表征学习</h3>
-              <p class="work-summary">设计 QIARL 状态抽象算法，自研 learner-actor 并行采样架构并迁移至 Ray / RLlib；在 SMAC、Procgen 与 MADDPG×MPE 上建立可复现训练评测底座。</p>
+              <h3>RL representation learning and distributed training</h3>
+              <p class="work-summary">Designed QIARL with Q-irrelevance state abstraction and validated it in PyTorch and TensorFlow on Procgen. Built a learner-actor architecture with ZeroMQ, multiprocessing, and shared memory, then migrated it to Ray / RLlib. Established reproducible multi-agent training and evaluation with SMAC, PyMARL, RLlib, and MADDPG / MPE.</p>
               <div class="tag-row">
-                <span class="tag signal">采样吞吐 ×10</span>
+                <span class="tag signal">Sampling throughput ~10x</span>
                 <span class="tag accent">QIARL</span>
                 <span class="tag accent">Ray / RLlib</span>
               </div>
@@ -716,7 +730,7 @@
       <div class="shell">
         <div class="section-head">
           <h2 class="section-title">Research</h2>
-          <div class="section-kicker">Selected Publications</div>
+          <div class="section-kicker">04 / 06</div>
         </div>
         <ul class="paper-list">
           <li class="paper-item">
@@ -743,23 +757,41 @@
       <div class="shell">
         <div class="section-head">
           <h2 class="section-title">Education</h2>
-          <div class="section-kicker">04 / 04</div>
+          <div class="section-kicker">05 / 06</div>
         </div>
         <ul class="education-list">
           <li class="education-item">
             <div class="education-period">2022.09 - Present</div>
-            <div class="education-school">北京航空航天大学 · 自动化科学与电气工程学院</div>
-            <div class="education-detail">博士研究生</div>
+            <div class="education-school">Beihang University<br><span class="paper-detail">School of Automation Science and Electrical Engineering</span></div>
+            <div class="education-detail">PhD Candidate</div>
           </li>
           <li class="education-item">
             <div class="education-period">2019.09 - 2021.12</div>
-            <div class="education-school">北京航空航天大学 · 软件学院</div>
-            <div class="education-detail">硕士 · 北京市优秀毕业生</div>
+            <div class="education-school">Beihang University<br><span class="paper-detail">School of Software</span></div>
+            <div class="education-detail">Master's Degree<br>Outstanding Graduate of Beijing<br>Outstanding Graduate Student of Beihang University</div>
           </li>
           <li class="education-item">
             <div class="education-period">2014.09 - 2018.06</div>
-            <div class="education-school">北京理工大学 · 光电学院</div>
-            <div class="education-detail">本科 · 优秀毕业论文</div>
+            <div class="education-school">Beijing Institute of Technology<br><span class="paper-detail">School of Optics and Photonics</span></div>
+            <div class="education-detail">Bachelor's Degree<br>Outstanding Undergraduate Thesis</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="section" id="honors">
+      <div class="shell">
+        <div class="section-head">
+          <h2 class="section-title">Competitions &amp; Honors</h2>
+          <div class="section-kicker">06 / 06</div>
+        </div>
+        <ul class="paper-list">
+          <li class="paper-item">
+            <div class="paper-venue">NeurIPS / AIcrowd</div>
+            <div><span class="paper-title">Procgen Reinforcement Learning Challenge</span><br><span class="paper-detail">7th of 82 teams; first among universities. Led algorithm development, Ray / RLlib trainer changes, data augmentation, and hyperparameter search across 12 environments.</span></div>
+          </li>
+          <li class="paper-item">
+            <div class="paper-venue">2023</div>
+            <div><span class="paper-title">Air Force Unmanned Systems Challenge</span><br><span class="paper-detail">Excellence Award in the 2v2 simulation track; first among non-military universities.</span></div>
           </li>
         </ul>
       </div>
@@ -768,11 +800,11 @@
 
   <footer class="footer">
     <div class="shell footer-inner">
-      <div>郝帅 · Algorithm Engineer</div>
+      <div>Shuai Hao / Sergio Termann · Algorithm Engineer</div>
       <div>
         <a href="mailto:shuaihao@buaa.edu.cn">Email</a> ·
         <a href="https://github.com/SergioTermann">GitHub</a> ·
-        <a href="./郝帅简历_重构版.html">Resume</a>
+        <a href="https://github.com/SergioTermann/SergioTermann#readme">Resume Overview</a>
       </div>
     </div>
   </footer>
