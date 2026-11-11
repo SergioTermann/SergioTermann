@@ -4,548 +4,134 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Shuai Hao | Sergio Termann | Algorithm Engineer</title>
-  <meta name="description" content="Shuai Hao, PhD candidate at Beihang University and AI team lead. Research and engineering in LLM agents, multimodal post-training, and multi-agent reinforcement learning.">
+  <meta name="description" content="Shuai Hao, PhD candidate at Beihang University and former AI team lead. Research and engineering in LLM agents, multimodal post-training, and multi-agent reinforcement learning.">
   <style>
-    :root {
-      --ink: #0f172a;
-      --muted: #5b6675;
-      --line: #e5e7eb;
-      --paper: #ffffff;
-      --canvas: #f7f8fa;
-      --accent: #0061d5;
-      --accent-soft: #eaf2ff;
-      --signal: #0b8f6a;
-      --signal-soft: #e8f7f1;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background: var(--canvas);
-      color: var(--ink);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .shell {
-      width: min(1120px, calc(100% - 40px));
-      margin: 0 auto;
-    }
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      height: 54px;
-      border-bottom: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.88);
-      backdrop-filter: blur(14px);
-    }
-
-    .topbar-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 100%;
-    }
-
-    .brand {
-      font-weight: 750;
-      letter-spacing: 0;
-      font-size: 15px;
-    }
-
-    .topbar-links {
-      display: flex;
-      gap: 22px;
-      align-items: center;
-      color: var(--muted);
-      font-size: 13px;
-      white-space: nowrap;
-    }
-
-    .topbar-links a:hover {
-      color: var(--ink);
-    }
-
-    .hero {
-      padding: 48px 0;
-      display: grid;
-      grid-template-columns: 260px 1fr;
-      gap: 52px;
-      align-items: center;
-    }
-
-    .portrait-frame {
-      width: 260px;
-      aspect-ratio: 3 / 4;
-      overflow: hidden;
-      border-radius: 2px;
-      background: #dbe1e8;
-      box-shadow: 0 24px 70px rgba(15, 23, 42, 0.16);
-    }
-
-    .portrait-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      filter: saturate(0.88) contrast(1.02);
-    }
-
-    .eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--accent);
-      font-size: 13px;
-      font-weight: 750;
-      letter-spacing: 0;
-      text-transform: uppercase;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 28px;
-      height: 2px;
-      background: var(--accent);
-    }
-
-    h1 {
-      margin: 18px 0 8px;
-      font-size: 56px;
-      line-height: 1.1;
-      letter-spacing: 0;
-      font-weight: 800;
-    }
-
-    .hero-role {
-      margin: 0;
-      color: #242e3e;
-      font-size: 21px;
-      line-height: 1.45;
-      font-weight: 500;
-    }
-
-    .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 20px;
-      margin-top: 26px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .hero-meta a:hover {
-      color: var(--accent);
-    }
-
-    .lede {
-      margin: 22px 0 0;
-      max-width: 760px;
-      color: #374151;
-      font-size: 16px;
-      line-height: 1.75;
-    }
-
-    .lede strong {
-      color: var(--ink);
-      font-weight: 650;
-    }
-
-    .section {
-      padding: 70px 0;
-      border-top: 1px solid var(--line);
-      background: var(--paper);
-    }
-
-    .section-head {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 20px;
-      margin-bottom: 32px;
-    }
-
-    .section-title {
-      margin: 0;
-      font-size: 28px;
-      font-weight: 760;
-      letter-spacing: 0;
-    }
-
-    .section-kicker {
-      color: var(--muted);
-      font-size: 13px;
-      white-space: nowrap;
-    }
-
-    .intro-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 64px;
-    }
-
-    .intro-title {
-      margin: 0 0 12px;
-      font-size: 17px;
-      font-weight: 700;
-    }
-
-    .intro-copy {
-      margin: 0;
-      color: #3f4a59;
-      font-size: 15px;
-      line-height: 1.75;
-    }
-
-    .metric-strip {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .metric-cell {
-      padding: 24px 20px 24px 0;
-      border-left: 1px solid var(--line);
-      padding-left: 20px;
-    }
-
-    .metric-cell:first-child {
-      border-left: 0;
-      padding-left: 0;
-    }
-
-    .metric-value {
-      font-size: 28px;
-      font-weight: 780;
-      letter-spacing: 0;
-      color: var(--accent);
-    }
-
-    .metric-label {
-      margin-top: 7px;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.4;
-    }
-
-    .expertise-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 28px;
-    }
-
-    .expertise-item {
-      min-width: 0;
-    }
-
-    .expertise-index {
-      display: block;
-      color: #aeb6c2;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0;
-      margin-bottom: 14px;
-    }
-
-    .expertise-title {
-      margin: 0 0 8px;
-      font-size: 16px;
-      font-weight: 720;
-    }
-
-    .expertise-list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      color: #475365;
-      font-size: 13px;
-      line-height: 1.65;
-    }
-
-    .work-list {
-      border-top: 1px solid var(--line);
-    }
-
-    .work-item {
-      display: grid;
-      grid-template-columns: 190px 1fr;
-      gap: 28px;
-      padding: 28px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .work-org {
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.55;
-      padding-top: 3px;
-    }
-
-    .work-org strong {
-      display: block;
-      color: var(--ink);
-      font-size: 14px;
-      margin-bottom: 4px;
-    }
-
-    .work-body h3 {
-      margin: 0 0 8px;
-      font-size: 20px;
-      font-weight: 750;
-      letter-spacing: 0;
-    }
-
-    .work-summary {
-      margin: 0;
-      color: #3f4a59;
-      font-size: 14px;
-      line-height: 1.7;
-    }
-
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 14px;
-    }
-
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      min-height: 26px;
-      padding: 0 9px;
-      border: 1px solid #d9e0e8;
-      border-radius: 4px;
-      color: #344054;
-      background: #fff;
-      font-size: 12px;
-      font-weight: 600;
-      max-width: 100%;
-      padding-block: 4px;
-      line-height: 1.5;
-    }
-
-    .tag.accent {
-      border-color: #bcd5ff;
-      color: #0050b3;
-      background: var(--accent-soft);
-    }
-
-    .tag.signal {
-      border-color: #b9e6d5;
-      color: #087a5a;
-      background: var(--signal-soft);
-    }
-
-    .paper-list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      border-top: 1px solid var(--line);
-    }
-
-    .paper-item {
-      display: grid;
-      grid-template-columns: 150px 1fr;
-      gap: 24px;
-      padding: 19px 0;
-      border-bottom: 1px solid var(--line);
-      font-size: 14px;
-      line-height: 1.55;
-    }
-
-    .paper-venue {
-      color: var(--accent);
-      font-weight: 650;
-      font-size: 13px;
-      padding-top: 2px;
-    }
-
-    .paper-title {
-      font-weight: 650;
-    }
-
-    .paper-detail {
-      color: var(--muted);
-    }
-
-    .education-list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      border-top: 1px solid var(--line);
-    }
-
-    .education-item {
-      display: grid;
-      grid-template-columns: 190px 1fr 180px;
-      gap: 24px;
-      padding: 20px 0;
-      border-bottom: 1px solid var(--line);
-      align-items: baseline;
-    }
-
-    .education-period {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .education-school {
-      font-weight: 700;
-      font-size: 16px;
-    }
-
-    .education-detail {
-      color: #475365;
-      font-size: 13px;
-      line-height: 1.5;
-      text-align: right;
-    }
-
-    .footer {
-      padding: 34px 0 50px;
-      color: var(--muted);
-      font-size: 13px;
-      border-top: 1px solid var(--line);
-      background: var(--canvas);
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .footer a:hover {
-      color: var(--ink);
-    }
-
-    main { overflow-wrap: anywhere; }
-    section[id] { scroll-margin-top: 72px; }
-    .hero > div, .work-body { min-width: 0; }
-    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
-
-    @media (max-width: 860px) {
-      .shell {
-        width: min(100% - 28px, 720px);
-      }
-
-      .topbar-links span {
-        display: none;
-      }
-
-      .topbar { height: auto; min-height: 54px; }
-      .topbar-inner { min-height: 54px; gap: 16px; padding-block: 12px; }
-      .topbar-links { flex-wrap: wrap; justify-content: flex-end; gap: 10px 14px; }
-      h1 { font-size: 40px; }
-      .hero-role { font-size: 18px; }
-
-      .hero {
-        grid-template-columns: 1fr;
-        gap: 28px;
-        padding: 28px 0;
-      }
-
-      .portrait-frame {
-        width: 120px;
-      }
-
-      .intro-grid,
-      .expertise-grid {
-        grid-template-columns: 1fr;
-        gap: 28px;
-      }
-
-      .metric-strip {
-        grid-template-columns: 1fr;
-      }
-
-      .metric-cell,
-      .metric-cell:first-child {
-        border-left: 0;
-        border-top: 1px solid var(--line);
-        padding: 18px 0;
-      }
-
-      .metric-cell:first-child {
-        border-top: 0;
-      }
-
-      .work-item,
-      .paper-item,
-      .education-item {
-        grid-template-columns: 1fr;
-        gap: 8px;
-      }
-
-      .education-detail {
-        text-align: left;
-      }
-
-      .section-head {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 8px;
-      }
-    }
+    :root { --paper:#f5f4ee; --ink:#202b28; --muted:#68716b; --line:#d9ddd3; --accent:#345f45; --soft:#e8eddf; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:100px; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; -webkit-font-smoothing:antialiased; }
+    a { color:inherit; text-decoration:none; }
+    a:focus-visible,summary:focus-visible { outline:2px solid var(--accent); outline-offset:6px; }
+    a:hover { color:var(--accent); }
+    .shell { width:min(1180px,calc(100% - 96px)); margin:auto; }
+    .skip-link { position:fixed; top:-70px; left:20px; z-index:30; padding:12px; background:white; }
+    .skip-link:focus { top:10px; }
+    .topbar { position:sticky; top:0; z-index:20; background:rgba(245,244,238,.94); backdrop-filter:blur(18px); border-bottom:1px solid var(--line); }
+    .topbar-inner { min-height:80px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { display:flex; align-items:center; gap:12px; font-size:14px; font-weight:650; }
+    .brand-mark { display:grid; place-items:center; background:var(--ink); color:var(--paper); border-radius:50%; width:34px; height:34px; font:italic 19px Georgia,serif; }
+    .topbar-links { display:flex; align-items:center; gap:28px; font-size:12px; }
+    .nav-contact { border:1px solid var(--line); padding:10px 16px; border-radius:30px; }
+    .hero { padding:80px 0 72px; display:grid; grid-template-columns:1.5fr 1fr; gap:72px; align-items:center; }
+    .eyebrow,.section-kicker,.portrait-caption,.expertise-index,.project-number,.footer-label { font:10px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace; letter-spacing:1.5px; text-transform:uppercase; }
+    .eyebrow { display:flex; align-items:center; gap:10px; color:var(--accent); }
+    .status-dot { width:7px; height:7px; border-radius:50%; background:#5b8053; box-shadow:0 0 0 4px #e4e9dc; }
+    h1 { font:normal clamp(64px,7.4vw,104px)/.99 Georgia,"Times New Roman",serif; letter-spacing:-5px; margin:26px 0 22px; }
+    h1 em { font-weight:normal; color:var(--accent); }
+    .hero-role { font-size:19px; line-height:1.5; max-width:460px; margin:0; letter-spacing:-.4px; }
+    .lede { font-size:14px; line-height:1.85; color:var(--muted); max-width:490px; margin:20px 0 26px; }
+    .hero-actions { display:flex; flex-wrap:wrap; align-items:center; gap:12px; }
+    .button { display:inline-flex; align-items:center; justify-content:space-between; gap:32px; padding:15px 21px; border:1px solid var(--line); border-radius:6px; font-size:12px; transition:transform .2s,background .2s; }
+    .button:hover { transform:translateY(-2px); background:var(--soft); }
+    .button.primary { background:var(--ink); color:white; border-color:var(--ink); }
+    .button.primary:hover { background:var(--accent); }
+    .hero-meta { margin-top:32px; font:10px/1.7 ui-monospace,SFMono-Regular,monospace; color:var(--muted); display:flex; flex-wrap:wrap; gap:8px 20px; }
+    .portrait-wrap { padding:16px; border:1px solid var(--line); border-radius:180px 180px 10px 10px; position:relative; max-width:360px; justify-self:end; width:100%; }
+    .portrait-frame { aspect-ratio:3/3.7; overflow:hidden; border-radius:165px 165px 4px 4px; background:#c2cfc5; }
+    .portrait-frame img { width:100%; height:100%; object-fit:cover; display:block; filter:saturate(.65); }
+    .portrait-caption { display:flex; justify-content:space-between; padding:17px 3px 3px; letter-spacing:.7px; font-size:9px; color:var(--muted); }
+    .portrait-note { position:absolute; bottom:77px; left:-34px; background:var(--paper); border:1px solid var(--line); border-radius:5px; padding:14px 20px; box-shadow:0 10px 30px #202b2808; font-size:11px; line-height:1.7; }
+    .portrait-note strong { display:block; font-size:13px; font-weight:600; }
+    .section { padding:70px 0; border-top:1px solid var(--line); }
+    .section-head { display:flex; align-items:baseline; justify-content:space-between; gap:20px; margin-bottom:34px; }
+    .section-title { font:normal 42px/1.1 Georgia,serif; letter-spacing:-1.4px; margin:0; }
+    .section-kicker { color:var(--muted); font-size:9px; }
+    .intro-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; }
+    .intro-title { font-size:14px; font-weight:600; margin:0 0 12px; }
+    .intro-copy { font-size:14px; line-height:1.8; color:var(--muted); margin:0; }
+    .metric-strip { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border-top:1px solid var(--line); padding-top:30px; gap:40px; }
+    .metric-cell { min-width:0; overflow-wrap:anywhere; border-right:1px solid var(--line); padding-right:30px; }
+    .metric-cell:last-child { border:0; }
+    .metric-value { font:normal 49px/1.1 Georgia,serif; letter-spacing:-2px; color:var(--accent); }
+    .metric-label { font-size:11px; line-height:1.7; color:var(--muted); margin-top:10px; max-width:240px; }
+    #work { background:#eaece3; }
+    .work-list { display:grid; grid-template-columns:1fr 1fr; gap:18px; counter-reset:project; }
+    .work-item { background:var(--paper); border:1px solid #d5dbcf; border-radius:10px; padding:30px; position:relative; transition:border-color .25s,transform .25s; }
+    .work-item:hover { border-color:#8b9c86; transform:translateY(-3px); }
+    .work-item:first-child { grid-column:1/-1; display:grid; grid-template-columns:240px 1fr; gap:48px; background:var(--ink); color:#f5f4ee; padding:40px; }
+    .work-org { font-size:10px; line-height:1.8; color:var(--muted); margin-bottom:22px; padding-right:28px; }
+    .work-org:before { counter-increment:project; content:"0" counter(project); position:absolute; right:28px; top:28px; font:italic 21px Georgia,serif; color:#92a08c; }
+    .work-org strong { display:block; font-size:11px; font-weight:600; margin-bottom:5px; color:var(--accent); }
+    .work-body h3 { font:normal 27px/1.22 Georgia,serif; letter-spacing:-.5px; margin:0 0 16px; max-width:510px; }
+    .work-summary { color:var(--muted); font-size:12px; line-height:1.85; margin:0; }
+    .work-item:first-child .work-org,.work-item:first-child .work-summary { color:#b7c6b9; }
+    .work-item:first-child .work-org strong { color:#d7e9bd; }
+    .work-item:first-child h3 { font-size:36px; }
+    .tag-row { display:flex; flex-wrap:wrap; gap:7px; margin-top:22px; }
+    .tag { border:1px solid var(--line); padding:5px 9px; border-radius:4px; font-size:9px; line-height:1.5; color:var(--muted); }
+    .tag.signal { background:var(--soft); border-color:transparent; color:var(--accent); }
+    .work-item:first-child .tag { color:#d7e9bd; border-color:#4b5c50; }
+    .expertise-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:35px; }
+    .expertise-index { color:#8a9b82; display:block; margin-bottom:18px; }
+    .expertise-title { font-size:14px; margin:0 0 12px; font-weight:600; }
+    .expertise-list { list-style:none; padding:0; margin:0; font-size:12px; color:var(--muted); line-height:2; }
+    .paper-list,.education-list { list-style:none; margin:0; padding:0; }
+    .paper-item { display:grid; grid-template-columns:190px 1fr; gap:35px; padding:25px 0; border-top:1px solid var(--line); font-size:14px; line-height:1.65; }
+    .paper-venue { font:10px/1.8 ui-monospace,SFMono-Regular,monospace; color:var(--accent); }
+    .paper-title { font-weight:500; }
+    .paper-detail { font-size:11px; color:var(--muted); }
+    .education-item { display:grid; grid-template-columns:190px 1fr 230px; gap:35px; border-top:1px solid var(--line); padding:25px 0; }
+    .education-period { font:10px/1.8 ui-monospace,SFMono-Regular,monospace; color:var(--muted); }
+    .education-school { font-size:16px; line-height:1.65; }
+    .education-detail { text-align:right; font-size:11px; color:var(--muted); line-height:1.8; }
+    .contact-section { background:var(--ink); color:var(--paper); padding:65px 0; }
+    .contact-inner { display:flex; justify-content:space-between; align-items:center; gap:32px; }
+    .contact-section h2 { font:normal 47px/1.1 Georgia,serif; letter-spacing:-1.5px; margin:12px 0 16px; }
+    .contact-section p { color:#b7c6b9; font-size:12px; line-height:1.8; margin:0; }
+    .contact-section .button { color:var(--ink); background:#dce7c7; border:0; }
+    .footer { padding:25px 0; background:var(--ink); color:#aebbb1; border-top:1px solid #3e4b42; }
+    .footer-inner { display:flex; justify-content:space-between; gap:20px; font-size:10px; line-height:1.8; }
+    .footer a:hover { color:white; }
+    .hero,.section { animation:appear .65s ease-out both; }
+    @keyframes appear { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+    @media(min-width:1500px) { .hero { padding-block:105px; } }
+    @media(max-width:1000px) { .shell { width:calc(100% - 56px); } .hero { gap:48px; } h1 { font-size:76px; } .portrait-note { left:-20px; } .work-item:first-child { grid-template-columns:190px 1fr; gap:25px; } .expertise-grid { grid-template-columns:1fr 1fr; } .education-item { grid-template-columns:140px 1fr; } .education-detail { grid-column:2; text-align:left; } }
+    @media(max-width:680px) { .shell { width:calc(100% - 40px); } .topbar-inner { min-height:70px; gap:12px; } .brand { font-size:12px; gap:8px; } .brand-mark { width:28px; height:28px; font-size:16px; } .topbar-links { gap:clamp(8px,3vw,16px); font-size:11px; } .topbar-links .desktop-link { display:none; } .nav-contact { padding:8px 12px; } .hero { grid-template-columns:1fr; gap:42px; padding:45px 0; } h1 { font-size:clamp(60px,19.5vw,76px); letter-spacing:-4px; } .hero-role { font-size:18px; } .lede { font-size:13px; } .portrait-wrap { max-width:280px; justify-self:center; } .portrait-note { left:-20px; } .hero-meta { margin-top:24px; } .section { padding:45px 0; } .section-title { font-size:33px; } .section-head { margin-bottom:25px; } .section-kicker { font-size:8px; letter-spacing:1px; } .intro-grid { grid-template-columns:1fr; gap:25px; } .intro-copy { font-size:13px; } .metric-strip { gap:14px; } .metric-cell { padding-right:10px; } .metric-value { font-size:33px; letter-spacing:-1px; } .metric-label { font-size:9px; } .work-list { grid-template-columns:1fr; } .work-item,.work-item:first-child { display:block; padding:25px; } .work-item:first-child h3 { font-size:29px; } .work-body h3 { font-size:26px; } .expertise-grid { gap:28px 18px; } .expertise-title { font-size:13px; } .expertise-list { font-size:11px; } .paper-item,.education-item { grid-template-columns:1fr; gap:8px; padding:20px 0; } .education-detail { grid-column:auto; } .contact-inner { display:block; } .contact-section h2 { font-size:38px; } .contact-section .button { margin-top:25px; } .footer-inner { flex-direction:column; gap:8px; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation:none!important; transition:none!important; } }
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="topbar">
     <div class="shell topbar-inner">
-      <div class="brand">SH</div>
+      <a class="brand" href="#main" aria-label="Shuai Hao home"><span class="brand-mark">sh.</span> Shuai Hao</a>
       <nav class="topbar-links" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#publications">Research</a>
-        <a href="#education">Education</a>
-        <a href="mailto:shuaihao@buaa.edu.cn">Email</a>
-        <span>Beijing · CN</span>
+        <a href="#work">Work</a><a href="#publications">Research</a><a class="desktop-link" href="#about">About</a><a class="nav-contact" href="#contact">Let's talk ↗</a>
       </nav>
     </div>
   </header>
-
-  <main>
-    <section class="hero shell">
-      <div class="portrait-frame">
-        <img src="./images/profile.jpg" alt="Portrait of Shuai Hao" width="260" height="347">
-      </div>
+  <main id="main">
+    <section class="hero shell" aria-labelledby="hero-title">
       <div>
-        <div class="eyebrow">Algorithm Engineer</div>
-        <h1>Shuai Hao</h1>
-        <p class="hero-role">LLM Agents / Multimodal Post-training / Multi-Agent RL</p>
-        <div class="hero-meta">
-          <span>PhD Candidate, Beihang University</span>
-          <span>AI Team Lead</span>
-          <a href="mailto:shuaihao@buaa.edu.cn">shuaihao@buaa.edu.cn</a>
-          <a href="https://github.com/SergioTermann">github.com/SergioTermann</a>
-        </div>
-        <p class="lede">I build and evaluate learning agents, from reward design and model post-training to production inference. My work spans <strong>multimodal reinforcement learning, coding-agent value models, and deployed operations agents</strong>. I lead AI development at a startup while pursuing my PhD at Beihang University.</p>
+        <div class="eyebrow"><span class="status-dot"></span> Researcher &amp; algorithm engineer</div>
+        <h1 id="hero-title">Shuai <em>Hao.</em></h1>
+        <p class="hero-role">Learning agents.<br>From research to real systems.</p>
+        <p class="lede">PhD candidate at Beihang University. I work on multimodal reinforcement learning, value models for coding agents, and the systems that bring them into production.</p>
+        <div class="hero-actions"><a class="button primary" href="#work">Explore my work <span aria-hidden="true">↘</span></a><a class="button" href="https://github.com/SergioTermann">GitHub <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-meta"><span>郝帅 / Sergio Termann</span><span>Beijing, China · Beihang University</span></div>
+      </div>
+      <div class="portrait-wrap">
+        <div class="portrait-frame"><img src="./images/profile.jpg" alt="Portrait of Shuai Hao" width="260" height="347" fetchpriority="high"></div>
+        <div class="portrait-note"><strong>Research ↔ Engineering</strong>LLM agents · Post-training · RL</div>
+        <div class="portrait-caption"><span>Shuai Hao / 郝帅</span><span>Beijing · CN</span></div>
       </div>
     </section>
 
     <section class="section" id="about">
       <div class="shell">
         <div class="section-head">
-          <h2 class="section-title">Profile</h2>
-          <div class="section-kicker">01 / 06</div>
+          <h2 class="section-title">A little context.</h2>
+          <div class="section-kicker">01 — About</div>
         </div>
         <div class="intro-grid">
           <div>
@@ -574,73 +160,53 @@
       </div>
     </section>
 
-    <section class="section" id="expertise">
-      <div class="shell">
-        <div class="section-head">
-          <h2 class="section-title">Expertise</h2>
-          <div class="section-kicker">02 / 06</div>
-        </div>
-        <div class="expertise-grid">
-          <div class="expertise-item">
-            <span class="expertise-index">01</span>
-            <h3 class="expertise-title">LLM Post-training</h3>
-            <ul class="expertise-list">
-              <li>RLVR / GRPO / GSPO</li>
-              <li>SFT / DPO</li>
-              <li>Reward Engineering</li>
-              <li>PRM / PVM</li>
-              <li>Best-of-N</li>
-            </ul>
-          </div>
-          <div class="expertise-item">
-            <span class="expertise-index">02</span>
-            <h3 class="expertise-title">Agent Systems</h3>
-            <ul class="expertise-list">
-              <li>Planner–Executor</li>
-              <li>Hybrid RAG</li>
-              <li>Function Calling</li>
-              <li>MCP / A2A</li>
-              <li>SWE-bench Evaluation</li>
-            </ul>
-          </div>
-          <div class="expertise-item">
-            <span class="expertise-index">03</span>
-            <h3 class="expertise-title">Reinforcement Learning</h3>
-            <ul class="expertise-list">
-              <li>PPO / SAC / GAIL</li>
-              <li>Multi-agent RL</li>
-              <li>Ray / RLlib</li>
-              <li>AReaL / TRL</li>
-              <li>LoRA Fine-tuning</li>
-            </ul>
-          </div>
-          <div class="expertise-item">
-            <span class="expertise-index">04</span>
-            <h3 class="expertise-title">Inference & Systems</h3>
-            <ul class="expertise-list">
-              <li>vLLM / Ollama</li>
-              <li>Xinference / Dify</li>
-              <li>GPU Clusters</li>
-              <li>Isaac Sim / Lab</li>
-              <li>Harfang DogFight</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="section" id="work">
       <div class="shell">
         <div class="section-head">
-          <h2 class="section-title">Selected Work</h2>
-          <div class="section-kicker">03 / 06</div>
+          <h2 class="section-title">Selected work.</h2>
+          <div class="section-kicker">02 — Selected work</div>
         </div>
         <div class="work-list">
           <article class="work-item">
             <div class="work-org">
-              <strong>Beijing Fengqi Shiyu Technology</strong>
-              2025 - Present<br>
-              Partner / AI Team Lead
+              <strong>ICML 2026</strong>
+              2025 - 2026<br>
+              First student author
+            </div>
+            <div class="work-body">
+              <h3>Geo-RL for long-form image captioning</h3>
+              <p class="work-summary">Contributed to problem formulation, geometric diversity reward design, credit assignment, implementation, evaluation, and ablations. Geo-RL uses a CLIP-weighted RBF-DPP log-determinant reward, pairwise repulsion, and PPO to balance semantic coverage with visual fidelity. Leave-one-out marginal advantages are computed from one Cholesky factorization. On DeCapBench, compared with LLaVA-1.5 7B MLE, Distinct-2 increased from 0.66 to 0.84 and SVS from 2.20 to 3.55, CLIPScore rose from 0.74 to 0.81, and CHAIRi decreased from 8.3% to 7.1%.</p>
+              <div class="tag-row">
+                <span class="tag accent">Set-level RL / PPO</span>
+                <span class="tag">Geometric Diversity</span>
+                <span class="tag">Evaluation Protocol</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-item">
+            <div class="work-org">
+              <strong>Prefix Value Model</strong>
+              2026 - Present<br>
+              First Author · TNNLS Under Review
+            </div>
+            <div class="work-body">
+              <h3>Prefix value models for long-horizon coding agents</h3>
+              <p class="work-summary">Independently developed the algorithm, data pipeline, experiments, and manuscript. Learned success probabilities from terminal outcomes to support Best-of-N selection and early abandonment. In information-budget-matched experiments, selection reached 0.926 ± 0.049 against a verifier oracle of 0.931 with no extra test execution. Early abandonment saved approximately 15% of end-to-end inference compute with near-zero accuracy loss. LoRA rejection-sampling fine-tuning improved single-pass repair success from 0.375 to 0.800. Built reproducible vLLM trajectory collection and evaluation across Qwen2.5-Coder 7B to 72B.</p>
+              <div class="tag-row">
+                <span class="tag signal">0.926 vs 0.931 oracle</span>
+                <span class="tag signal">Inference compute savings ~15%</span>
+                <span class="tag accent">72B · vLLM</span>
+                <span class="tag accent">Outcome-supervised</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-item">
+            <div class="work-org">
+              <strong>Beijing Fengqi Shiyu Technology Co., Ltd.</strong>
+              Sep 2024 - Oct 2026<br>
+              Former Partner / AI Team Lead / Project Owner
             </div>
             <div class="work-body">
               <h3>Production agents for intelligent operations</h3>
@@ -656,48 +222,13 @@
 
           <article class="work-item">
             <div class="work-org">
-              <strong>Prefix Value Model</strong>
-              2026 - Present<br>
-              First Author · TNNLS Under Review
-            </div>
-            <div class="work-body">
-              <h3>Prefix value models for long-horizon coding agents</h3>
-              <p class="work-summary">Independently developed the algorithm, data pipeline, experiments, and manuscript. Learned success probabilities from terminal outcomes to support Best-of-N selection and early abandonment. Selection reached 0.926 +/- 0.049 against a verifier oracle of 0.931 with no extra test execution. Early abandonment saved approximately 15% of end-to-end inference compute with near-zero accuracy loss. Built reproducible vLLM trajectory collection and evaluation across Qwen2.5-Coder 7B to 72B.</p>
-              <div class="tag-row">
-                <span class="tag signal">0.926 vs 0.931 oracle</span>
-                <span class="tag signal">Inference compute savings ~15%</span>
-                <span class="tag accent">72B · vLLM</span>
-                <span class="tag accent">Outcome-supervised</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="work-item">
-            <div class="work-org">
-              <strong>ICML 2026</strong>
-              2024 - 2026<br>
-              Second Author
-            </div>
-            <div class="work-body">
-              <h3>Geo-RL for long-form image captioning</h3>
-              <p class="work-summary">Contributed to problem formulation, reward and credit-assignment design, implementation, evaluation, and ablations. Geo-RL uses a CLIP-weighted RBF-DPP log-determinant reward, pairwise repulsion, and PPO to balance semantic coverage with visual fidelity. Leave-one-out marginal advantages are computed from one Cholesky factorization. On DeCapBench, compared with LLaVA-1.5 7B MLE, Distinct-2 increased from 0.66 to 0.84 and SVS from 2.20 to 3.55, while CHAIRi decreased from 8.3% to 7.1%.</p>
-              <div class="tag-row">
-                <span class="tag accent">Set-level RL / PPO</span>
-                <span class="tag">Geometric Diversity</span>
-                <span class="tag">Evaluation Protocol</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="work-item">
-            <div class="work-org">
               <strong>CASIC Intelligent Research Institute</strong>
-              2024.01 - 2025.03<br>
+              Jan 2024 - Mar 2025<br>
               Algorithm Intern
             </div>
             <div class="work-body">
               <h3>Human-guided learning for UAV air-combat simulation</h3>
-              <p class="work-summary">Built a Harfang DogFight simulation and RL training platform, with Gym interfaces, a PyQt5 experiment UI, and PPO / SAC training. Collected 2.7 hours of expert demonstrations for GAIL initialization and PPO fine-tuning. Developed vectorized Isaac Lab environments, GPU deployment, and ACMI telemetry with Tacview replay for reproducible simulation evaluation.</p>
+              <p class="work-summary">Built a Harfang DogFight simulation and RL training platform, with Gym interfaces, a PyQt5 experiment UI, and PPO / SAC training across 1v1–25v25 scenarios. Collected 2.7 hours of expert demonstrations for GAIL initialization and PPO fine-tuning. Developed vectorized Isaac Lab environments, GPU deployment, and ACMI telemetry with Tacview replay for reproducible simulation evaluation.</p>
               <div class="tag-row">
                 <span class="tag signal">Simulation kill rate 2.3x vs. SOTA</span>
                 <span class="tag signal">Engagement duration -30%</span>
@@ -709,7 +240,7 @@
           <article class="work-item">
             <div class="work-org">
               <strong>Institute of Automation, Chinese Academy of Sciences</strong>
-              2020.03 - 2022.03<br>
+              Mar 2020 - Mar 2022<br>
               Algorithm Intern
             </div>
             <div class="work-body">
@@ -729,8 +260,8 @@
     <section class="section" id="publications">
       <div class="shell">
         <div class="section-head">
-          <h2 class="section-title">Research</h2>
-          <div class="section-kicker">04 / 06</div>
+          <h2 class="section-title">Research &amp; publications.</h2>
+          <div class="section-kicker">03 — Publications</div>
         </div>
         <ul class="paper-list">
           <li class="paper-item">
@@ -743,7 +274,7 @@
           </li>
           <li class="paper-item">
             <div class="paper-venue">ICML · 2026</div>
-            <div><span class="paper-title">Escaping the Likelihood Trap: Geometric Diversity Optimization for Long-Form Image Captioning</span><br><span class="paper-detail">Second author</span></div>
+            <div><span class="paper-title">Escaping the Likelihood Trap: Geometric Diversity Optimization for Long-Form Image Captioning</span><br><span class="paper-detail">First student author</span></div>
           </li>
           <li class="paper-item">
             <div class="paper-venue">ICICIP · 2021</div>
@@ -753,11 +284,66 @@
       </div>
     </section>
 
+    <section class="section" id="expertise">
+      <div class="shell">
+        <div class="section-head">
+          <h2 class="section-title">Tools of the trade.</h2>
+          <div class="section-kicker">04 — Expertise</div>
+        </div>
+        <div class="expertise-grid">
+          <div class="expertise-item">
+            <span class="expertise-index">01</span>
+            <h3 class="expertise-title">LLM Post-training</h3>
+            <ul class="expertise-list">
+              <li>GRPO / PPO</li>
+              <li>SFT / LoRA</li>
+              <li>Reward Engineering</li>
+              <li>PRM / PVM</li>
+              <li>Best-of-N</li>
+            </ul>
+          </div>
+          <div class="expertise-item">
+            <span class="expertise-index">02</span>
+            <h3 class="expertise-title">Agent Systems</h3>
+            <ul class="expertise-list">
+              <li>Planner–Executor</li>
+              <li>Hybrid RAG</li>
+              <li>Function Calling</li>
+              <li>Agent Trajectory Construction</li>
+              <li>SWE-bench Evaluation</li>
+            </ul>
+          </div>
+          <div class="expertise-item">
+            <span class="expertise-index">03</span>
+            <h3 class="expertise-title">Reinforcement Learning</h3>
+            <ul class="expertise-list">
+              <li>PPO / SAC / GAIL</li>
+              <li>Multi-agent RL</li>
+              <li>Ray / RLlib</li>
+              <li>PyTorch / TRL</li>
+              <li>LoRA Fine-tuning</li>
+            </ul>
+          </div>
+          <div class="expertise-item">
+            <span class="expertise-index">04</span>
+            <h3 class="expertise-title">Inference & Systems</h3>
+            <ul class="expertise-list">
+              <li>vLLM / Tensor Parallelism</li>
+              <li>Distributed Sampling</li>
+              <li>GPU Clusters</li>
+              <li>Isaac Sim / Lab</li>
+              <li>Harfang DogFight</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="education">
       <div class="shell">
         <div class="section-head">
-          <h2 class="section-title">Education</h2>
-          <div class="section-kicker">05 / 06</div>
+          <h2 class="section-title">Academic roots.</h2>
+          <div class="section-kicker">05 — Education</div>
         </div>
         <ul class="education-list">
           <li class="education-item">
@@ -781,8 +367,8 @@
     <section class="section" id="honors">
       <div class="shell">
         <div class="section-head">
-          <h2 class="section-title">Competitions &amp; Honors</h2>
-          <div class="section-kicker">06 / 06</div>
+          <h2 class="section-title">Along the way.</h2>
+          <div class="section-kicker">06 — Beyond the work</div>
         </div>
         <ul class="paper-list">
           <li class="paper-item">
@@ -794,7 +380,11 @@
             <div><span class="paper-title">Air Force Unmanned Systems Challenge</span><br><span class="paper-detail">Excellence Award in the 2v2 simulation track; first among non-military universities.</span></div>
           </li>
         </ul>
+        <p class="intro-copy" style="margin-top:28px;"><strong>Beyond research:</strong> Beihang table tennis team member (Beijing rating 1650). SolidWorks, Blender, CAD, 3D printing, and indoor/outdoor quadrotor swarm control. German A1.</p>
       </div>
+    </section>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="shell contact-inner"><div><span class="footer-label">Open to opportunities</span><h2 id="contact-title">Let’s build learning agents.</h2><p>Seeking an LLM agent post-training internship in Beijing.<br>Available five days a week, for six months.</p></div><a class="button" href="mailto:by2203054@buaa.edu.cn">Get in touch <span aria-hidden="true">↗</span></a></div>
     </section>
   </main>
 
@@ -802,7 +392,7 @@
     <div class="shell footer-inner">
       <div>Shuai Hao / Sergio Termann · Algorithm Engineer</div>
       <div>
-        <a href="mailto:shuaihao@buaa.edu.cn">Email</a> ·
+        <a href="mailto:by2203054@buaa.edu.cn">Email</a> ·
         <a href="https://github.com/SergioTermann">GitHub</a> ·
         <a href="https://github.com/SergioTermann/SergioTermann#readme">Resume Overview</a>
       </div>

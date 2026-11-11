@@ -1,87 +1,64 @@
 <div align="center">
-  <h1>Sergio Termann (Shuai Hao)</h1>
-  <p><strong>LLM-Agentensysteme · Multi-Agenten-Reinforcement-Learning · Embodied Intelligence</strong></p>
-  <p>Mitgründer & AI-Leiter · Doktorand an der Beihang-Universität</p>
-  <p>
-    <a href="mailto:shuaihao@buaa.edu.cn">E-Mail</a> ·
-    Peking, China ·
-    <a href="./README.md">English</a> ·
-    <a href="./README_ZH.md">中文</a>
-  </p>
-  <img src="./images/profile.jpg" alt="Profilfoto" width="170" />
-  &nbsp;&nbsp;
-  <img src="./images/life_photo1.jpg" alt="Persönliches Foto" width="170" />
+  <img src="./images/profile.jpg" alt="Shuai Hao" width="168" />
+  <h1>Shuai Hao | Sergio Termann</h1>
+  <p><strong>LLM-Agenten · Multimodales Post-Training · Multi-Agenten-RL</strong></p>
+  <p>Doktorand an der Beihang-Universität · Ehemaliger AI Team Lead</p>
+  <p><a href="mailto:by2203054@buaa.edu.cn">E-Mail</a> · Peking · <a href="https://sergiotermann.github.io/SergioTermann/">Homepage</a> · <a href="./README.md">English</a> · <a href="./README_ZH.md">中文</a></p>
 </div>
 
 ## Profil
 
-Ich bin Doktorand im Bereich Automatisierung an der Beihang-Universität und arbeite praktisch an **LLM-Agenten, Multi-Agenten-Reinforcement-Learning und Embodied Intelligence**. Als Mitgründer und AI-Leiter begleite ich KI-Produkte von der Technologiestrategie und Systemarchitektur bis zu Modelltraining, Bereitstellung und Auslieferung.
+Ich entwickle Lernverfahren und Agentensysteme von der Datenaufbereitung über Reward-Design und Post-Training bis zur Evaluation und Bereitstellung. Meine Schwerpunkte sind multimodales Reinforcement Learning, Wertmodelle für Coding-Agenten und produktive Agentensysteme.
 
-Meine aktuelle Arbeit konzentriert sich auf produktionsreife Agentensysteme mit Planner-Executor-Workflows, hybridem RAG, Produktwissensgraphen, SFT, Function Calling und Feedbackschleifen. Außerdem arbeite ich mit Isaac Sim, verteiltem Reinforcement Learning, GPU-Clustern und lokaler LLM-Bereitstellung.
+Ich suche ein Praktikum im Bereich LLM-Agenten-Post-Training in Peking: fünf Tage pro Woche für sechs Monate.
 
-## Schwerpunkte
+## Ausgewählte Arbeiten
 
-- **KI-Führung:** Mitgründung eines Technologieunternehmens und Leitung von Architektur und Auslieferung eines intelligenten Shopping-Agenten; das Projekt trug zu einem Investment von Tsinghua Lihe bei einer Bewertung von rund 40 Millionen RMB bei
-- **Forschung:** Zweitautor einer ICML-2026-Arbeit zur geometrischen Diversitätsoptimierung für ausführliche Bildbeschreibungen
-- **RL-Engineering:** Aufbau wiederverwendbarer Multi-Agenten-Simulations-, Trainings- und Evaluationspipelines mit Isaac Sim und GPU-Clustern
-- **Wettbewerbe:** Weltweit Platz 7 in Runde 1 der NeurIPS 2020 AIcrowd Procgen Challenge und Excellence Award bei der Air Force Unmanned Swarm Challenge 2023
+### Geo-RL · ICML 2026 · 2025–2026
 
-## Fachkenntnisse
+**Erster studentischer Autor** — *Escaping the Likelihood Trap: Geometric Diversity Optimization for Long-Form Image Captioning*
 
-| Bereich | Methoden & Werkzeuge |
-| --- | --- |
-| LLM-Agenten | Planner-Executor, hybrides RAG, SFT, Function Calling, Wissensgraphen |
-| Reinforcement Learning | Multi-Agenten-RL, Imitation Learning, adversariale Entscheidungsfindung, Ray, RLlib |
-| Simulation & Systeme | Python, ZeroMQ, Isaac Sim, verteiltes Sampling, GPU-Cluster |
-| Bereitstellung | Dify, Xinference, Ollama, lokale LLM-Bereitstellung |
+- Mitarbeit an Modellierung, Reward-Design und experimenteller Validierung; mengenbasierte Rewards und PPO verbinden semantische Vielfalt mit visueller Genauigkeit.
+- DeCapBench gegenüber LLaVA-1.5 7B MLE: Distinct-2 0.66→0.84, SVS 2.20→3.55, CLIPScore 0.74→0.81, Objekthalluzinationsrate 8.3%→7.1%.
 
-## Ausgewählte Berufserfahrung
+### Prefix Value Model · 2026–heute
 
-### Beijing Fengqi Shiyu Technology Co., Ltd. · Mitgründer & AI-Leiter
+**TNNLS im Begutachtungsverfahren · Eigenständig durchgeführt**
 
-**Intelligenter Shopping-Agent**
+- Algorithmus, Daten, Experimentalsystem und Manuskript eigenständig entwickelt. Endergebnisse dienen als Supervision für Erfolgsprognosen während langer Coding-Agent-Trajektorien.
+- Best-of-N-Auswahl: 0.926±0.049 gegenüber Verifier-Oracle 0.931, ohne zusätzliche Testausführungen. Früher Abbruch spart ungefähr 15% Rechenaufwand bei nahezu unveränderter Genauigkeit.
+- vLLM-Evaluation von Qwen2.5-Coder 7B–72B; LoRA-Fine-Tuning mit Rejection Sampling steigert die Erfolgsrate einzelner Reparaturversuche von 0.375 auf 0.800.
 
-- Verantwortung für KI-Roadmap, Systemarchitektur, Modelltraining und Projektauslieferung
-- Entwicklung einer Planner-Executor-Pipeline mit hybridem RAG, Produktwissensgraph, Function Calling und Nutzerfeedback
-- Aufbau von Workflows zur SFT-Datenerzeugung und Qualitätssicherung sowie lokale Modellbereitstellung
+### Beijing Fengqi Shiyu Technology · Sept. 2024–Okt. 2026
 
-### Aerospace Science and Industry Intelligent Research Institute · Forschungspraktikant
+**Ehemaliger Partner / AI Team Lead**
 
-**Multi-Agenten-Reinforcement-Learning mit Isaac Sim · Apr. 2024 - Okt. 2024**
+- Verantwortung für Architektur, Daten, Training und Bereitstellung eines Agenten für intelligenten IT-Betrieb: Planner–Executor, hybrides RAG und Function Calling.
+- Qwen3-8B mit TRL GRPOTrainer, LoRA und vLLM; Trainingsdaten 9215→2310, Slot-Extraktion 0.914→0.961.
+- Ticket-Abschlussrate +12.4%, Erstbehebung +8.7%, selbstständige Diagnoseabschlüsse +18.5%; Tool-Halluzinationen 6.8%→2.9%. Angel-Investment von Tsinghua Lihe.
 
-- Aufbau paralleler Simulationsumgebungen für UAV- und Quadruped-Roboterteams
-- Anpassung von Umgebungen, Algorithmen und Trainingspipelines für GPU-Cluster
-- Entwicklung wiederverwendbarer Abläufe für großskaliges RL-Training und Evaluation
+### Aerospace Science and Industry Intelligent Research Institute · Jan. 2024–März 2025
 
-### Nationales Großprojekt „Wissenschafts- und Technologieinnovation 2030“
+**Algorithmus-Praktikant**
 
-**Entscheidungsfindung in hochdynamischen adversarialen Umgebungen · März 2020 - März 2022**
+- Harfang-DogFight-Trainingsplattform, 2.7 Stunden Expertendemonstrationen, GAIL und PPO; Abschussrate 2.3× gegenüber SOTA, Gefechtsdauer −30%.
+- Parallele Isaac-Lab-Simulationen, ACMI-2.2-Telemetrie und Tacview-Wiedergabe. Erstautor einer angenommenen Arbeit im IEEE Systems, Man, and Cybernetics Magazine (2026).
 
-- Entwicklung von Werkzeugen zur Erfassung von Expertendemonstrationen mit Harfang3D Dogfight
-- Aufbau von Mehrflugzeug-Kampfszenarien und reproduzierbaren Trainings- und Benchmark-Pipelines
+### Institut für Automatisierung, Chinesische Akademie der Wissenschaften · März 2020–März 2022
 
-### Institut für Automatisierung, Chinesische Akademie der Wissenschaften · Gruppe Zhao Dongbin
+**Gruppe Zhao Dongbin · Algorithmus-Praktikant**
 
-**StarCraft-KI-Mikromanagement & RoboMaster-Navigation · März 2020 - März 2022**
+- QIARL-Repräsentationslernen, PyTorch-/TensorFlow-Validierung und verteilte Learner–Actor-Infrastruktur mit Ray / RLlib; Sampling-Durchsatz um eine Größenordnung erhöht.
+- QIARL: Erstautor, ICICIP 2021; SCQRL: Mitautor, IEEE TCDS 2023.
 
-- Entwicklung eines parallelen RL-Samplingsystems mit Python Multiprocessing und ZeroMQ
-- Implementierung einer kollisionsfreien Navigation über die gesamte Karte für RoboMaster-Roboter; der Ansatz wurde von späteren Teams wiederverwendet, die in drei nationalen Disziplinen erste Preise gewannen
+## Ausbildung und Auszeichnungen
 
-## Forschung & Auszeichnungen
+- **Beihang-Universität:** Promotion, School of Automation Science and Electrical Engineering, Sept. 2022–heute.
+- **Beihang-Universität:** Master, School of Software, Sept. 2019–Dez. 2021; Auszeichnung der Stadt Peking und der Universität.
+- **Beijing Institute of Technology:** Bachelor, School of Optics and Photonics, Sept. 2014–Juni 2018; ausgezeichnete Abschlussarbeit und drei erste Preise bei universitären Wissenschafts- und Technologiewettbewerben.
+- **NeurIPS 2020 AIcrowd Procgen Challenge:** Platz 7 von 82 Teams, erstes Hochschulteam.
+- **Air Force Challenge 2023:** Excellence Award im 2v2-Simulationswettbewerb, erstes Team unter nichtmilitärischen Hochschulen.
 
-- **ICML 2026, Zweitautor** — *Escaping the Likelihood Trap: Geometric Diversity Optimization for Long-Form Image Captioning*
-- Publikationen in **IEEE Transactions on Cognitive and Developmental Systems**, **Aerospace Science and Technology**, **Guidance, Navigation and Control** sowie bei **ICICIP**
-- **NeurIPS 2020 AIcrowd Procgen Challenge** — weltweit Platz 10 im Warm-up, Platz 7 in Runde 1 und Top 16 in Runde 2
-- **Air Force Unmanned Swarm Challenge 2023, 2v2** — Excellence Award
+## Weitere Fähigkeiten
 
-## Ausbildung
-
-- **Promotion in Automatisierung**, Beihang-Universität, 2022 - heute
-- **MEng in Software Engineering**, Beihang-Universität, 2019 - 2021  
-  Ausgezeichneter Absolvent der Beihang-Universität · Ausgezeichneter Absolvent der Stadt Peking
-- **BEng in Mess- und Regelungstechnik**, Beijing Institute of Technology, 2014 - 2018  
-  Ausgezeichnete Bachelorarbeit · Erster und zweiter Preis bei universitären Wissenschafts- und Technologiewettbewerben
-
-<div align="center">
-  <sub>Offen für Forschungs- und Entwicklungskooperationen zu KI-Agenten, Reinforcement Learning und Embodied Intelligence.</sub>
-</div>
+SolidWorks, Blender, CAD, 3D-Druck und Quadrotor-Schwarmsteuerung. Mitglied des Beihang-Tischtennisteams (Peking-Rating 1650); Deutsch A1.
