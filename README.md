@@ -4,7 +4,7 @@
   <p><strong>Algorithm Engineer | LLM Agents / Multimodal Post-training / Multi-Agent Reinforcement Learning</strong></p>
   <p>PhD Candidate, Beihang University · AI Team Lead</p>
   <p>
-    <a href="mailto:shuaihao@buaa.edu.cn">Email</a> ·
+    <a href="mailto:by2203054@buaa.edu.cn">Email</a> ·
     Beijing, China ·
     <a href="https://sergiotermann.github.io/SergioTermann/">Homepage</a> ·
     <a href="https://github.com/SergioTermann?tab=repositories">Repositories</a>
