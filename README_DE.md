@@ -3,7 +3,7 @@
   <h1>Shuai Hao | Sergio Termann</h1>
   <p><strong>LLM-Agenten · Multimodales Post-Training · Multi-Agenten-RL</strong></p>
   <p>Doktorand an der Beihang-Universität · Ehemaliger AI Team Lead</p>
-  <p><a href="mailto:by2203054@buaa.edu.cn">E-Mail</a> · Peking · <a href="https://sergiotermann.github.io/SergioTermann/">Homepage</a> · <a href="./README.md">English</a> · <a href="./README_ZH.md">中文</a></p>
+  <p><a href="mailto:by2203054@buaa.edu.cn">E-Mail</a> · Peking · <a href="https://sergiotermann.github.io/SergioTermann/">Homepage</a> · <a href="./README_EN.md">English</a> · <a href="./README_ZH.md">中文</a></p>
 </div>
 
 ## Profil

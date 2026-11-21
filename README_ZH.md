@@ -7,7 +7,7 @@
     <a href="mailto:by2203054@buaa.edu.cn">邮箱</a> · 中国北京 ·
     <a href="https://sergiotermann.github.io/SergioTermann/">个人主页</a> ·
     <a href="https://github.com/SergioTermann?tab=repositories">GitHub</a> ·
-    <a href="./README.md">English</a> · <a href="./README_DE.md">Deutsch</a>
+    <a href="./README_EN.md">English</a> · <a href="./README_DE.md">Deutsch</a>
   </p>
 </div>
 
