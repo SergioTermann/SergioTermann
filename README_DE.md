@@ -1,64 +1,53 @@
 <div align="center">
-  <img src="./images/profile.jpg" alt="Shuai Hao" width="168" />
-  <h1>Shuai Hao | Sergio Termann</h1>
-  <p><strong>LLM-Agenten · Multimodales Post-Training · Multi-Agenten-RL</strong></p>
-  <p>Doktorand an der Beihang-Universität · Ehemaliger AI Team Lead</p>
-  <p><a href="mailto:by2203054@buaa.edu.cn">E-Mail</a> · Peking · <a href="https://sergiotermann.github.io/SergioTermann/">Homepage</a> · <a href="./README_EN.md">English</a> · <a href="./README_ZH.md">中文</a></p>
+  <img src="./images/profile.jpg" alt="Porträt von Shuai Hao" width="128">
+  <h1>Shuai Hao · Sergio Termann</h1>
+  <p><strong>Doktorand an der Beihang-Universität · Nachtraining von LLM-Agenten und multimodales verstärkendes Lernen</strong></p>
+  <p>
+    <a href="mailto:by2203054@buaa.edu.cn">E-Mail</a> ·
+    <a href="https://github.com/SergioTermann?tab=repositories">Quellcode</a> ·
+    <a href="https://sergiotermann.github.io/SergioTermann/">Persönliche Website</a> ·
+    <a href="https://github.com/SergioTermann?tab=overview" hreflang="en">Englische Fassung</a>
+  </p>
 </div>
 
-## Profil
+Ich erforsche Präfix-Wertmodelle für Programmieragenten, die Aufgaben über viele Schritte hinweg bearbeiten, sowie verstärkendes Lernen auf Mengenebene für Bild-Sprach-Modelle. Zuvor war ich Partner und KI-Teamleiter bei Beijing Fengqi Shiyu Technology. Dort leitete ich die Entwicklung, das Training und die Einführung eines Agenten für den IT-Betrieb.
 
-Ich entwickle Lernverfahren und Agentensysteme von der Datenaufbereitung über Reward-Design und Post-Training bis zur Evaluation und Bereitstellung. Meine Schwerpunkte sind multimodales Reinforcement Learning, Wertmodelle für Coding-Agenten und produktive Agentensysteme.
-
-Ich suche ein Praktikum im Bereich LLM-Agenten-Post-Training in Peking: fünf Tage pro Woche für sechs Monate.
+Ich suche in Peking ein sechsmonatiges Praktikum im Nachtraining von LLM-Agenten und bin fünf Tage pro Woche verfügbar.
 
 ## Ausgewählte Arbeiten
 
-### Geo-RL · ICML 2026 · 2025–2026
+### Geo-RL für ausführliche Bildbeschreibungen
 
-**Erster studentischer Autor** — *Escaping the Likelihood Trap: Geometric Diversity Optimization for Long-Form Image Captioning*
+**ICML 2026 · Erstautor unter den Studierenden**
 
-- Mitarbeit an Modellierung, Reward-Design und experimenteller Validierung; mengenbasierte Rewards und PPO verbinden semantische Vielfalt mit visueller Genauigkeit.
-- DeCapBench gegenüber LLaVA-1.5 7B MLE: Distinct-2 0.66→0.84, SVS 2.20→3.55, CLIPScore 0.74→0.81, Objekthalluzinationsrate 8.3%→7.1%.
+Ich war an der Methodenentwicklung, der Gestaltung der Belohnungsfunktion und der Auswertung beteiligt. Geo-RL misst mit einem CLIP-gewichteten determinantalen Punktprozess, wie gut eine Menge von Beschreibungen den Bildinhalt abdeckt. Die Methode bewertet den Beitrag jeder Beschreibung, indem sie diese einzeln aus der Menge entfernt. Auf DeCapBench stieg gegenüber LLaVA-1.5 7B MLE das Maß für das semantische Volumen von **2,20 auf 3,55** und Distinct-2 von 0,66 auf 0,84. Der Anteil fälschlich genannter Objekte sank von 8,3 % auf 7,1 %.
 
-### Prefix Value Model · 2026–heute
+### Präfix-Wertmodelle für mehrstufige Programmieraufgaben
 
-**TNNLS im Begutachtungsverfahren · Eigenständig durchgeführt**
+**IEEE TNNLS · Erstautor · Im Begutachtungsverfahren**
 
-- Algorithmus, Daten, Experimentalsystem und Manuskript eigenständig entwickelt. Endergebnisse dienen als Supervision für Erfolgsprognosen während langer Coding-Agent-Trajektorien.
-- Best-of-N-Auswahl: 0.926±0.049 gegenüber Verifier-Oracle 0.931, ohne zusätzliche Testausführungen. Früher Abbruch spart ungefähr 15% Rechenaufwand bei nahezu unveränderter Genauigkeit.
-- vLLM-Evaluation von Qwen2.5-Coder 7B–72B; LoRA-Fine-Tuning mit Rejection Sampling steigert die Erfolgsrate einzelner Reparaturversuche von 0.375 auf 0.800.
+Ich entwickelte eigenständig ein Präfix-Wertmodell, das anhand des endgültigen Aufgabenergebnisses lernt, den Erfolg eines Programmieragenten bereits während der Bearbeitung vorherzusagen. In Experimenten mit gleichem Informationsbudget erzielte die Auswahl des besten von N Kandidaten **0,926 ± 0,049**. Der Referenzwert des Verifikators lag bei 0,931. Für die Auswahl waren keine zusätzlichen Testläufe nötig. Ein frühzeitiger Abbruch sparte rund **15 % des gesamten Inferenzaufwands** bei nahezu unveränderter Genauigkeit. Mit vLLM richtete ich die Erfassung der Bearbeitungsverläufe und die tensorparallele Auswertung von Qwen2.5-Coder-Modellen mit 7 bis 72 Milliarden Parametern auf SWE-bench-Lite ein.
 
-### Beijing Fengqi Shiyu Technology · Sept. 2024–Okt. 2026
+### Agent für den IT-Betrieb
 
-**Ehemaliger Partner / AI Team Lead**
+**Beijing Fengqi Shiyu Technology · Ehemaliger KI-Teamleiter · Sep. 2024–Okt. 2026**
 
-- Verantwortung für Architektur, Daten, Training und Bereitstellung eines Agenten für intelligenten IT-Betrieb: Planner–Executor, hybrides RAG und Function Calling.
-- Qwen3-8B mit TRL GRPOTrainer, LoRA und vLLM; Trainingsdaten 9215→2310, Slot-Extraktion 0.914→0.961.
-- Ticket-Abschlussrate +12.4%, Erstbehebung +8.7%, selbstständige Diagnoseabschlüsse +18.5%; Tool-Halluzinationen 6.8%→2.9%. Angel-Investment von Tsinghua Lihe.
+Ich leitete die Entwicklung der Architektur für Planung und Ausführung, der hybriden Suche, der Werkzeugaufrufe und der Rückführung fehlgeschlagener Fälle in den Trainingsprozess. Mit TRL und vLLM trainierte ich Qwen3-8B mit LoRA und GRPO nach. Feldbezogene Belohnungen und die Auswahl geeigneter Trainingsbeispiele steigerten den Messwert für die Feldextraktion von 0,914 auf 0,961. Im laufenden Betrieb stieg die **Abschlussquote der Tickets um 12,4 %**. Die Rate halluzinierter Werkzeugaufrufe sank von 6,8 % auf 2,9 %.
 
-### Aerospace Science and Industry Intelligent Research Institute · Jan. 2024–März 2025
+## Publikationen und Forschungserfahrung
 
-**Algorithmus-Praktikant**
+- **ICML 2026 · Erstautor unter den Studierenden** — Geometrische Diversität für ausführliche Bildbeschreibungen
+- **IEEE TNNLS · Erstautor, im Begutachtungsverfahren** — Präfix-Wertmodelle mit Erfolgssignalen für Auswahl und frühzeitigen Abbruch bei Programmieragenten
+- **IEEE SMC Magazine · Erstautor, angenommen** — Durch menschliche Demonstrationen angeleitetes Lernen für Entscheidungen im simulierten Drohnenluftkampf
+- **ICICIP 2021 · Erstautor** — Repräsentationslernen mit Q-Irrelevanz-Abstraktion für verstärkendes Lernen
+- **IEEE TCDS 2023 · Mitautor** — SCQRL, eine Erweiterung von QIARL
 
-- Harfang-DogFight-Trainingsplattform, 2.7 Stunden Expertendemonstrationen, GAIL und PPO; Abschussrate 2.3× gegenüber SOTA, Gefechtsdauer −30%.
-- Parallele Isaac-Lab-Simulationen, ACMI-2.2-Telemetrie und Tacview-Wiedergabe. Erstautor einer angenommenen Arbeit im IEEE Systems, Man, and Cybernetics Magazine (2026).
+Am Institut für Automatisierung der Chinesischen Akademie der Wissenschaften forschte ich zur Zustandsabstraktion und portierte ein verteiltes System zur Stichprobenerhebung auf Ray und RLlib. Bei der NeurIPS 2020 AIcrowd Procgen Challenge belegte unser Team in der ersten Runde **Platz 7 von 82** und war damit das bestplatzierte Hochschulteam.
 
-### Institut für Automatisierung, Chinesische Akademie der Wissenschaften · März 2020–März 2022
+## Ausbildung
 
-**Gruppe Zhao Dongbin · Algorithmus-Praktikant**
+- **Beihang-Universität** · Promotion in Arbeit, Fakultät für Automatisierung und Elektrotechnik · seit Sep. 2022
+- **Beihang-Universität** · Master, Fakultät für Software · Sep. 2019–Dez. 2021 · Auszeichnung als herausragender Absolvent der Stadt Peking
+- **Beijing Institute of Technology** · Bachelor, Fakultät für Optik und Photonik · Sep. 2014–Juni 2018 · Auszeichnung für die Bachelorarbeit
 
-- QIARL-Repräsentationslernen, PyTorch-/TensorFlow-Validierung und verteilte Learner–Actor-Infrastruktur mit Ray / RLlib; Sampling-Durchsatz um eine Größenordnung erhöht.
-- QIARL: Erstautor, ICICIP 2021; SCQRL: Mitautor, IEEE TCDS 2023.
-
-## Ausbildung und Auszeichnungen
-
-- **Beihang-Universität:** Promotion, School of Automation Science and Electrical Engineering, Sept. 2022–heute.
-- **Beihang-Universität:** Master, School of Software, Sept. 2019–Dez. 2021; Auszeichnung der Stadt Peking und der Universität.
-- **Beijing Institute of Technology:** Bachelor, School of Optics and Photonics, Sept. 2014–Juni 2018; ausgezeichnete Abschlussarbeit und drei erste Preise bei universitären Wissenschafts- und Technologiewettbewerben.
-- **NeurIPS 2020 AIcrowd Procgen Challenge:** Platz 7 von 82 Teams, erstes Hochschulteam.
-- **Air Force Challenge 2023:** Excellence Award im 2v2-Simulationswettbewerb, erstes Team unter nichtmilitärischen Hochschulen.
-
-## Weitere Fähigkeiten
-
-SolidWorks, Blender, CAD, 3D-Druck und Quadrotor-Schwarmsteuerung. Mitglied des Beihang-Tischtennisteams (Peking-Rating 1650); Deutsch A1.
+Ich spiele in der Tischtennismannschaft der Beihang-Universität und habe in Peking eine Wertungszahl von 1650.
